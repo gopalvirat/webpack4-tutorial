@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -"
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "<piyush.walia@cueblocks.com>",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^1.0.1",
