@@ -8,7 +8,7 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "<piyush.walia@cueblocks.com>",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^1.0.1",
