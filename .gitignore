@@ -1,0 +1,6 @@
+
+
+# Ignored so production can have different versions
+/robots.txt
+/.htaccess
+/node_modules
