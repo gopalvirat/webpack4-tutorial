@@ -1,0 +1,79 @@
+// File Name: _projects.less
+// Description: project link
+// Used by: _menu.less
+// Dependencies:
+// ------------------------------------------------------------
+@keyframes p_ltr_sp{
+    0%{
+      .letter_spacing_ph(380);
+    }
+    100%{
+      .letter_spacing_ph(1840);
+    }
+}
+
+@keyframes p_ltr_sp_in{
+    0%{
+      .letter_spacing_ph(1840);
+    }
+    100%{
+      .letter_spacing_ph(380);
+    }
+}
+
+@nav_p_w: 724px;
+
+@keyframes p_w_in{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: @nav_p_w;
+  }
+}
+
+@keyframes p_w_out{
+  0%{
+    width: @nav_p_w;
+  }
+  100%{
+    width: 0px
+  }
+}
+
+.nav_links{
+  li{
+    &.nav_projects{
+      left: 195px;
+      a{
+        .cross_sign(-24px 0 0 8px);
+        .letter_spacing_ph(380);
+        .nav_animation(p_ltr_sp_in);
+      }
+      span.nav_bg{
+        background-image: url("@{img-path}/menu/projects.gif");
+        .nav_animation(p_w_out);
+        top: 3px;
+          &:before{
+            left: 0;
+            top: 5px;
+          }
+      }
+      p{
+        right: 70px;
+        opacity: 0;
+      }
+      &:hover{
+          a{
+           .nav_animation(p_ltr_sp);
+           }
+          span.nav_bg{
+            .nav_animation(p_w_in);
+          }
+          p{
+            .nav_animation(nav_desc);
+          }
+        }
+    }
+  }
+}

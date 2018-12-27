@@ -1,0 +1,112 @@
+// File Name: _section_1.less
+// Description: Ovegano text fill and Image hide animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+.ovegano_fonts_section{
+  text-align: center;
+  .inline-100;
+  margin-top: 100px;
+  position: relative;
+  &:before{
+    content: "";
+    background-image:url("@{sub_img-path}/portfolio/ovegano/fonts_grahic.png");
+    width: 30%;
+    background-size: contain;
+    height: 506px;
+    position: absolute;
+    left:0;
+    top: 150px;;
+    background-repeat: no-repeat;
+  }
+  &:after{
+    content: "";
+    background-image:url("@{sub_img-path}/portfolio/ovegano/footer_sprite.png");
+    width: 346px;
+    height: 272px;
+    position: absolute;
+    right:10%;
+    bottom: -94px;
+    background-repeat: no-repeat;
+    @media @Xl_desktop{
+      right: 6%;
+    }
+    @media @l_desktop{
+      right: 6%;
+    }
+  }
+  p{
+    width: 600px;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  h3{
+      text-align: center;
+      text-transform: uppercase;
+      .base_font;
+      .letter_spacing_ph(260);
+      font-size: 24px;
+      font-weight: 600;
+  }
+}
+.font_variations{
+  background-image:url("@{sub_img-path}/portfolio/ovegano/footer_sprite.png");
+  background-repeat: no-repeat;
+  background-position: -343px -29px;
+  width: 333px;
+  height: 76px;
+  .inline-block;
+  margin:60px 0;
+}
+.ft_small_desc{
+  color: #e04552;
+  .base_regular_font;
+  font-size: 18px;
+  text-transform: uppercase;
+  .letter_spacing_ph(60);
+  .block;
+  text-align: center;
+  font-weight: bold;
+  width: 558px;
+  margin: auto;
+}
+
+.ovegano_finale_section{
+  margin-top: 200px;
+  text-align: center;
+  .finale_title{
+    background-image:url("@{sub_img-path}/portfolio/ovegano/footer_sprite.png");
+    background-repeat: no-repeat;
+    background-position:-23px -299px;
+    width: 675px;
+    height: 137px;
+    .block;
+    margin: auto;
+  }
+  h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 80px;
+  }
+  p{
+    width: 600px;
+margin: auto;
+font-size: 15px;
+margin-top: 30px;
+  }
+}
+.og_footer{
+  img{
+    vertical-align: top
+  }
+}
+.ovg_client_tm{
+  .title_font;
+  font-size: 16px;
+}

@@ -1,0 +1,80 @@
+// File Name: _expertise.less
+// Description: expertise link
+// Used by: _menu.less
+// Dependencies:
+// ------------------------------------------------------------
+@keyframes e_ltr_sp{
+    0%{
+      .letter_spacing_ph(380);
+    }
+    100%{
+      .letter_spacing_ph(1640);
+    }
+}
+
+@keyframes e_ltr_sp_in{
+    0%{
+      .letter_spacing_ph(1640);
+    }
+    100%{
+      .letter_spacing_ph(380);
+    }
+}
+
+@nav_e_w: 745px;
+
+@keyframes e_w_in{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: @nav_e_w;
+  }
+}
+
+@keyframes e_w_out{
+  0%{
+    width: @nav_e_w;
+  }
+  100%{
+    width: 0px
+  }
+}
+
+.nav_links{
+  li{
+    &.nav_expertise{
+      left: 136px;
+      a{
+        .cross_sign(28px 0 0 35px);
+        .letter_spacing_ph(380);
+        .nav_animation(e_ltr_sp_in);
+      }
+      span.nav_bg{
+        background-image: url("@{img-path}/menu/expertise.gif");
+        .nav_animation(e_w_out);
+        height: 31px;
+        left: -7px;
+          &:before{
+            left: 0;
+            top: 5px;
+          }
+      }
+      p{
+        right: 67px;
+        opacity: 0;
+      }
+      &:hover{
+          a{
+           .nav_animation(e_ltr_sp);
+           }
+          span.nav_bg{
+            .nav_animation(e_w_in);
+          }
+          p{
+            .nav_animation(nav_desc);
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+// File Name: _expertise.less
+// Description: Expertise page
+// Used by: page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+@ex_Sprite_path: url("@{root_img-path}/expertise/ex_sprite.png");
+
+
+.ex_section{
+  text-align: center;
+  margin-top: 130px;
+  h1{
+        .titles_bundle;
+      margin-bottom: 0;
+  }
+  p{
+    width: 600px;
+    .p_title_inner();
+    font-size: 15px;
+  }
+}
+.ex_vertical{
+  .original{
+    .transform(-83px,0,90deg) !important;
+    .letter_spacing_ph(660);
+    &:after{
+      content: "";
+      background-image: @ex_Sprite_path;
+      .sprite-cal-al(auto,auto,-332px, -1px, 19px, 21px);
+      right: -35px;
+      bottom: 0;
+      .transform(0,0,270deg);
+      position: absolute;
+    }
+  }
+  @media @h_700{
+      margin-top: 50px;
+  }
+}
+
+.ex_center{
+  margin: auto;
+  width: 1140px;
+  @media @s_desktop{
+    width: 90%;
+  }
+  @media @s_tablet{
+    width: 100%;
+  }
+}
+
+.ex_left_sec{
+  float: left;
+  width: 70%;
+  margin-top:72px;
+    @media @s_desktop{
+      width: 100%;
+    }
+    @media @s_tablet{
+
+    }
+    .upper_layer,
+    .bottom_layer
+    {
+      width: 450px;
+    }
+    .layer_button{
+      float:right;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      @media @s_desktop{
+        float: none;
+        margin:0 auto 50px auto;
+        width: 450px;
+      }
+    }
+}
+
+.ex_lists{
+  li{
+    .base_regular_font;
+    .inline-block;
+    padding-left:45px;
+    position: relative;
+    margin-bottom: 35px;
+    h6{
+      .letter_only_spacing(440);
+      font-size: 18px;
+      font-weight: normal;
+      color: @secondary-color;
+    }
+    p{
+      font-size: 12px;
+      color: @black;
+      .letter_only_spacing(60);
+      margin-top: 10px;
+      width: 500px;
+      .base_font;
+    }
+    &.ex_divider{
+      padding-right: 20px;
+        &:after{
+          .slide_cut;
+          right: -50px;
+        }
+    }
+  }
+}
+.slide_cut(){
+  content: "";
+  background-image: url("@{root_img-path}/expertise/ex_divider.svg");
+  position: absolute;
+  right: -15px;
+  top: -12px;
+  width: 55px;
+  height: 115px;
+  };
+  
+.ex_right_sec{
+  float: right;
+  position: relative;
+  margin-top: 97px;
+  @media @s_desktop{
+    width: 373px;
+    margin: 50px auto 0 auto;
+    height: 350px;
+    float: none;
+  }
+    .ex_t_ballon{
+      background-image: @ex_Sprite_path;
+      width: 370px;
+      height: 110px;
+      position: absolute;
+      background-position: 0 -309px;
+      z-index: 1;
+      right: 0;
+      .b_f_window,
+      .b_b_window
+      {
+          background-image: @ex_Sprite_path;
+          background-position: -331px -93px;
+          width: 23px;
+          height: 5px;
+          position: absolute;
+          left: 74px;
+          bottom: 14px;
+          right: 0;
+      }
+      .b_b_window{
+          background-position: -331px -101px;
+          left: 111px;
+          bottom: 14px;
+      }
+    }
+    .ex_b_machine{
+      background-image: @ex_Sprite_path;
+      width: 329px;
+      height: 304px;
+      position: absolute;
+      background-position: 0 -2px;
+      top: 90px;
+      right: 30px;
+    }
+}
+
+.m_cap{
+    background-image: @ex_Sprite_path;
+    background-position: -330px -37px;
+    width: 24px;
+    height: 18px;
+    bottom:118px;
+    right:102px;
+    position: absolute;
+}
+.f_cap{
+    background-image: @ex_Sprite_path;
+    background-position: -330px -64px;
+    width: 24px;
+    height: 20px;
+    bottom:107px;
+    right:82px;
+    position: absolute;
+}
+
+.ex_smoke{
+  position: absolute;
+  top: -32px;
+  right: 0;
+  span{
+    background-image: url("@{root_img-path}/expertise/smoke.png");
+    position: absolute;
+    z-index: -1;
+    width: 40px;
+    height:23px;
+  }
+  &_1{
+    top: 245px;
+    right: 138px;
+  }
+  &_2{
+    right:142px;
+    top: 242px;
+  }
+  &_3{
+    height:20px;
+    right:135px;
+    top: 232px;
+  }
+  &_4{
+    right:137px;
+    top: 239px;
+  }
+}
+
+.ex_select_box{
+  position: absolute;
+  left: 18px;
+  top: 3px;
+  display: none;
+}
+.ex_lists{
+  @media @s_desktop{
+    text-align: center;
+    li{
+      text-align: left;     
+    }
+  }
+}

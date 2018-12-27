@@ -1,0 +1,68 @@
+// File Name: _menu.less
+// Description: Navigation for all pages
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+@time: .3s;
+
+.nav_animation(@arguments) {
+	-webkit-animation: @arguments @time ease-out forwards;
+	-moz-animation: @arguments @time ease-out forwards;
+	animation: @arguments @time ease-out forwards;
+}
+
+
+.nav_font_style{
+  line-height: 29px;  
+  position: relative;
+  color: @white;
+  font-size: 43px;
+  .inline-block;
+  .font_extend;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav_bg_anim{
+  height: 28px;
+  .absolute-center;
+  z-index: -1;
+  overflow: hidden;
+  transform-origin: center;
+}
+
+.cross_sign(@value){
+    span{
+      &:before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        margin:@value;
+        height: 9px;
+        background-position: 0 0;
+        background-image: url("@{img-path}/menu/menu_sprite.png");
+      }
+  }
+}
+
+.s_m(@left:0, @top: 0, @b_left, @b_top){
+	background-image: url("@{img-path}/menu/menu_sprite.png");
+	background-position: @left @top;
+	width: 11px;
+	height: 17px;
+	.inline-block;
+	.transition(all, 1s, ease-in);
+	&:hover{
+		&:after{
+			content:"";
+			position: absolute;
+			z-index: -1;
+			top: 5px;
+			width: 11px;
+			height: 17px;
+			background-position: @b_left @b_top;
+			background-image: url("@{img-path}/menu/menu_sprite.png");
+		}
+	}
+}

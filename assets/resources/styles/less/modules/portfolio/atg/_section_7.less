@@ -1,0 +1,102 @@
+// File Name: _section_6.less
+// Description: Seeds and life section
+// Used by: portfolio.less
+// Dependencies:
+// ------------------------------------------------------------
+.s_7{
+  margin-top: 90px;
+  position: relative;
+  &_bg{
+    position: absolute;
+    width: 100%;
+    background-image:url("@{sub_img-path}/home/atg/iphone_bg.jpg");
+    height: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    top: -75px;
+    z-index: -1;
+    img{
+      width: 100%;
+    }
+  }
+  &_left{
+    position: absolute;
+    left: 0;
+    top: 0
+  }
+
+  &_atg_logo{
+    margin: 50px 0 155px 0;
+    .inline-block;
+    position: relative;
+  }
+  &_ml_cont{
+    padding-top:80px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+  }
+  &_elem_cont{
+    width: 320px;
+    height: 674px;
+    position: absolute;
+    left:50%;
+    top: 100px;
+    margin-left: -157px;
+  }
+}
+
+.iphone_anim_elem(@x: 0, @y: 0, @width, @height, @top, @left){
+    position: absolute;
+    top: @top;
+    left:@left;
+    z-index: -1;
+      transform: scale(0.7);
+      span{
+        background-image: url("@{sub_img-path}/home/atg/iphone_leaf_sprite.png");
+        background-repeat: no-repeat;
+        width: @width;
+        height: @height;
+        background-position: @x @y;
+        position: absolute;
+        transform: scale(0);
+      }
+};
+
+.iphone_elem{
+  &_1{
+    .iphone_anim_elem(-5px, -13px, 171px, 169px, -59px, auto);
+    right:82px;
+  }
+  &_2{
+    .iphone_anim_elem(-3px,-406px, 176px, 193px, -61px, 47px);
+  }
+  &_3{
+    .iphone_anim_elem(-3px,-198px, 211px, 211px, auto, auto);
+    right: 85px;
+    bottom: 116px;
+  }
+  &_4{
+    .iphone_anim_elem(-216px, -317px, 284px, 482px, 31%, auto);
+    right: 30%;
+  }
+  &_5{
+    .iphone_anim_elem(-8px, -605px, 131px, 195px, 18%, -47px);
+  }
+  &_6{
+    .iphone_anim_elem(-216px, 0px, 215px, 331px, auto, -31%);
+    bottom: 45%;
+  }
+}
+.cls-1 {
+  fill: #4dc093;
+}
+
+.cls-2 {
+  font-size: 22px;
+  fill: #fff;
+  text-anchor: middle;
+  font-family: Raleway;
+}

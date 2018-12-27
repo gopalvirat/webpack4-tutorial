@@ -1,0 +1,78 @@
+// File Name: _careers.less
+// Description: _careers link
+// Used by: _menu.less
+// Dependencies:
+// ------------------------------------------------------------
+@keyframes c_ltr_sp{
+    0%{
+      .letter_spacing_ph(380);
+    }
+    100%{
+      .letter_spacing_ph(1840);
+    }
+}
+
+@keyframes c_ltr_sp_in{
+    0%{
+      .letter_spacing_ph(1840);
+    }
+    100%{
+      .letter_spacing_ph(380);
+    }
+}
+
+@nav_c_w: 624px;
+
+@keyframes c_w_in{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: @nav_c_w;
+  }
+}
+
+@keyframes c_w_out{
+  0%{
+    width: @nav_c_w;
+  }
+  100%{
+    width: 0px
+  }
+}
+
+.nav_links{
+  li{
+    &.nav_careers{
+      left: 270px;
+      a{
+        .cross_sign(-3px 0 0 45px);
+        .letter_spacing_ph(380);
+        .nav_animation(c_ltr_sp_in);
+      }
+      span.nav_bg{
+        background-image: url("@{img-path}/menu/careers.gif");
+        .nav_animation(c_w_out);
+          &:before{
+            left: 0;
+            top: 5px;
+          }
+      }
+      p{
+        right: 75px;
+        opacity: 0;
+      }
+      &:hover{
+          a{
+           .nav_animation(c_ltr_sp);
+           }
+          span.nav_bg{
+            .nav_animation(c_w_in);
+          }
+          p{
+            .nav_animation(nav_desc);
+          }
+        }
+    }
+  }
+}

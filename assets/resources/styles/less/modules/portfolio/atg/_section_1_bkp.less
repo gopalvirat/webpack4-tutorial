@@ -1,0 +1,138 @@
+// File Name: _section_1.less
+// Description: Ovegano text fill and Image hide animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+
+.home-front_cont{
+  width: 100%;
+  height: 1080px;
+}
+.words_cont{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+
+  width: 884px;
+  margin:auto;
+  height: 492px;
+}
+.fixed_ovegano{
+  position: absolute;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.c_prop{
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.ovegano_title-section{
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+
+.ovegano_letters li,
+.ovegano_letters li span.lt-pos_full
+{
+  position: absolute;
+  background-image:url("@{img-path}/ovegano-sprite.png");
+  background-repeat: no-repeat;
+}
+
+.ovegano_letters li span.lt-pos_full{
+    opacity: 0;
+}
+
+
+.ovegano_letters{
+  li{
+    &.o-pos_half{
+      .sprite-cal-al(44px, 103px, 0, 0, 128px, 120px);
+        animation: animate 3s linear alternate infinite;
+        .lt-pos_full{
+          .sprite-cal-al(auto, 33px, -887px, -6px, 93px, 77px);
+          bottom: -7px;
+        }
+    }
+    &.v-pos_half{
+        .sprite-cal-al(54px, 235px, -130px, -6px, 124px, 102px);
+          .lt-pos_full{
+            .sprite-cal-al(auto, 13px, -852px, -90px, 67px, 92px);
+            bottom: -30px;
+        }
+    }
+    &.e-pos_half{
+        .sprite-cal-al(69px, 366px, -262px, -6px, 78px, 122px);
+        animation: animate 3s linear alternate-reverse infinite;
+          .lt-pos_full{
+            .sprite-cal-al(auto, -1px, -920px, -95px, 79px, 9px);
+            bottom: 0px;
+        }
+    }
+    &.g-pos_half{
+        .sprite-cal-al(179px, 444px, -351px, -6px, 109px, 128px);
+        animation: animate 3s linear alternate infinite;
+          .lt-pos_full{
+            .sprite-cal-al(1px, 39px, -960px, -117px, 40px, 31px);
+        }
+    }
+    &.a-pos_half{
+        .sprite-cal-al(209px, 552px, -468px, -3px, 117px, 128px);
+          .lt-pos_full.top_a{
+            .sprite-cal-al(2px, 47px, -853px, -6px, 27px, 27px)
+          }
+          .lt-pos_full.left_a{
+            .sprite-cal-al(73px, 18px, -821px, -151px, 33px, 30px)
+          }
+          .lt-pos_full.right_a{
+            .sprite-cal-al(106px, 98px, -938px, -154px, 21px, 19px)
+          }
+    }
+    &.n-pos_half{
+        .sprite-cal-al(213px, auto, -597px, -20px, 109px, 125px);
+        right: 89px;
+          .lt-pos_full{
+            .sprite-cal-al(61px, 83px, -769px, -154px, 24px, 26px);
+        }
+    }
+    &.o_l-pos_half{
+        .sprite-cal-al(242px, auto, -720px, -19px, 127px, 128px);
+        right: -56px;
+          .lt-pos_full{
+            .sprite-cal-al(61px, 83px, -769px, -154px, 24px, 26px);
+        }
+    }
+  }
+}
+.ovegano_brief{
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  width: 884px;
+  visibility: hidden;
+  opacity: 0;
+left: 0;
+right: 0;
+position: relative;
+transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+top: 50%;
+margin: auto;
+}

@@ -1,0 +1,127 @@
+.pf_titles{
+  .letter_spacing_ph(420);
+  text-transform: uppercase;
+  font-size: 50px;
+  .base_font;
+  font-weight: 600;
+}
+
+.b_titles_inner(){
+  .base_font;
+  font-size: 80px;
+  font-size: 4.19vw;
+  text-transform: uppercase;
+  .letter_spacing_ph(120);
+  margin: 0;
+  line-height: 70px;
+}
+
+.p_title_inner(){
+  .base_font;
+  font-size: 13px;
+  .inline-block;
+  margin: 20px auto 0 auto;    
+}
+
+
+.video_play_title(){
+  .secondary_font;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: @white;
+  .letter_spacing_ph(380);
+  cursor: pointer;
+  text-align: center;
+}
+/************************************ Custom Radio and Check Boxs *******************************************/
+.ui-radio { position:relative; font-size:14px; line-height:20px; height:20px; margin:0 20px 10px; }
+.ui-radio input[type=radio]+span { padding-left:10px; }
+.ui-radio input[type=radio]+span:before { content:""; width:18px; height:18px; display:inline-block; vertical-align:middle; position:absolute; left:-20px; top:0; background:#fff; border-radius:50%; border:1px solid #ccc; -webkit-transition:all .15s ease-in-out;
+-moz-transition:all .15s ease-in-out;
+transition:all .15s ease-in-out;
+}
+.ui-radio input[type=radio]:checked+span:after { content:""; width:8px; height:8px; position:absolute; top:5px; left:-15px; background-color:#828282; border-radius:50%; display:block; }
+.ui-checkbox { position:relative; }
+.ui-checkbox input[type=checkbox]+span { margin-bottom: 0px !important; }
+.ui-checkbox input[type=checkbox]+span:before { content:""; width:15px; height:15px; float: left; vertical-align:text-top; margin-right:10px; background-color:#fff; border:2px solid @secondary-color; -webkit-transition:all .15s ease-in-out;
+-moz-transition:all .15s ease-in-out;
+transition:all .15s ease-in-out;
+}
+.ui-checkbox input[type=checkbox]:checked+span:before { border:2px solid #3d3d3d; }
+.ui-checkbox input[type=checkbox]:checked+span:after { content:""; width:5px; height:5px; position:absolute; top:5px; left:5px; background-color:#828282; display:block; }
+.ui-checkbox input[type=checkbox]:disabled:checked+span:before { opacity:.65; border:1px solid #ccc; }
+.ui-radio input[type=radio]+span:hover, .ui-checkbox input[type=checkbox]+span:hover { cursor:pointer; }
+.ui-radio input[type=radio]+span:hover:before, .ui-radio input[type=radio]:checked+span:before, .ui-checkbox input[type=checkbox]+span:hover:before { border-color:#000; }
+.ui-radio input[type=radio]:disabled+span:hover, .ui-checkbox input[type=checkbox]:disabled+span:hover { cursor:not-allowed; }
+.ui-radio input[type=radio]:disabled+span:hover:before, .ui-radio input[type=radio]:disabled:checked+span:before, .ui-checkbox input[type=checkbox]:disabled+span:hover:before { border-color:#ccc; }
+.ui-radio input[type=radio], .ui-checkbox input[type=checkbox] { display:none; }
+.ui-radio input[type=radio]:disabled+span:before, .ui-checkbox input[type=checkbox]:disabled+span:before { opacity:.65; border:1px solid #ccc; cursor:no-drop; }
+.ui-radio input[type=radio]:disabled:checked+span:after, .ui-checkbox input[type=checkbox]:disabled:checked+span:after { opacity:.65; cursor:no-drop; background-color:#ccc; }
+
+@text-fill-color: #585858;
+.text-stroke(){
+  stroke-width: .5;
+  fill:@secondary-color;
+  stroke: @secondary-color;
+}
+//
+@keyframes svg_text-fill{
+0% {
+    fill: @text-fill-color;
+    }
+
+34%{
+  fill: @text-fill-color;
+}
+35%{
+  .text-stroke;
+}
+36%{
+  fill:@text-fill-color;
+  stroke-width:0;
+}
+
+72%{
+  fill:@text-fill-color;
+}
+73%{
+  .text-stroke;
+}
+74%{
+  fill:@text-fill-color;
+  stroke-width:0;
+}
+100%{
+  fill:@text-fill-color;
+}
+};
+
+@keyframes svg_car-fill{
+  0%{
+    fill:none;
+  }
+  50%{
+  fill:@secondary-color;
+  }
+  51%{
+    fill: none;
+  }
+  52%{
+    fill:@secondary-color;
+    opacity: 0.5;
+  }
+  54%{
+    fill:none;
+  }
+  55%{
+    fill:@secondary-color;
+    opacity: 0.9;
+  }
+  56%{
+    fill:none;
+  }
+  to{
+    fill:none
+  }
+};

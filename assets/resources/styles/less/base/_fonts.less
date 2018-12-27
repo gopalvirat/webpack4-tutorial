@@ -1,0 +1,103 @@
+//@import 'font-awesome/font-awesome.less';
+
+// Heading font
+.title_font(){
+      font-family: 'butlerregular';
+};
+// mixin for title font
+.titles_bundle(){
+  .title_font;
+  font-size: 50px;
+  text-transform: capitalize;
+  color: @black;
+  font-weight: normal;
+}
+.desc_bundle(){
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  letter-spacing: .5px;
+  font-weight: 300;
+  color:#010101;
+  .inline-block;
+}
+ 
+// Paragraph font
+.base_font(){
+  font-family: 'Poppins', sans-serif;
+};
+
+// extra styling font
+.font_extend(){
+    font-family: 'Telegraph Clean';
+};
+
+
+
+@font-face {
+      font-family: 'brandon_grotesquemedium';
+    src: url('@{font-path}/brandon_med-webfont.woff2') format('woff2'),
+         url('@{font-path}/brandon_med-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'butlerregular';
+    src: url('@{font-path}/butler_regular-webfont.woff2') format('woff2'),
+         url('@{font-path}/butler_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.headings(){
+  .title_font;
+  font-size: 40px;
+  text-transform: capitalize;
+};
+
+
+.secondary_font(@size: 14px){
+  font-family: 'Telegraph Clean';
+  font-size: @size;
+}
+.base_regular_font{
+  font-family: 'Telegraph Clean';
+}
+
+
+@font-face {
+	font-family: 'Telegraph Clean';
+	src: url('@{font-path}/TelegraphClean.eot');
+	src: url('@{font-path}/TelegraphClean.eot?#iefix') format('embedded-opentype'),
+		url('@{font-path}/TelegraphClean.woff2') format('woff2'),
+		url('@{font-path}/TelegraphClean.woff') format('woff'),
+		url('@{font-path}/TelegraphClean.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Sophia';
+	src: url('@{font-path}/Sophia.eot');
+	src: url('@{font-path}/Sophia.eot?#iefix') format('embedded-opentype'),
+		url('@{font-path}/Sophia.woff2') format('woff2'),
+		url('@{font-path}/Sophia.woff') format('woff'),
+		url('@{font-path}/Sophia.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('@{font-path}/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('@{font-path}/amaticsc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'BADABB';
+	src: url('@{font-path}/BADABB.eot');
+	src: local('BADABB'), url('@{font-path}/BADABB.woff') format('woff'), url('@{font-path}/BADABB.ttf') format('truetype');
+}

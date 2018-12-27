@@ -1,0 +1,190 @@
+// File Name: _heart.less
+// Description: heart effects and upper part
+// Used by: _about.less
+// Dependencies:
+// ------------------------------------------------------------
+.about_center{
+  width: 1000px;
+  margin: auto;
+}
+.abt_heading{
+  width: 100%;
+  text-align: center;
+  margin-top: 130px;
+    h1{
+      .titles_bundle;
+      @media @s_tablet{
+        font-size: 50px;
+      }
+    }
+    p{
+      .desc_bundle;
+      width: 700px;
+      margin: 17px auto;
+    }
+}
+
+.abt_design_love{
+  .original{
+    .letter_spacing_ph(760);
+    font-size: 14px;
+    .transform(-23px,0,90deg) !important;
+    position: relative;
+    &:after{
+      content: "";
+        background-image: url("@{img-path}/about/about_sprite.png");
+        background-position:1px -322px;
+        width: 21px;
+        height: 25px;
+        position: absolute;
+        transform: rotate(270deg);
+        bottom: -6px;
+        right: -35px;
+    }
+  }
+}
+
+.heart_small_info.country{
+  position: absolute;
+  .base_regular_font;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  left: 110px;
+  bottom: 116px;
+}
+
+.heart_small_info.digits{
+  position: absolute;
+  .base_regular_font;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  right: 10px;
+  bottom:17px;
+  .transition(all,.2s,cubic-bezier(0.4, 0, 1, 1));
+}
+
+.heart_cont{
+  margin:50px auto;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.glitch-img {position: absolute;width : 314px; height : 483px; top: 0 ; left : 0; right:0; bottom: 0;}
+.heart_pic{
+width: 350px;
+height: 500px;
+margin: auto;
+position: relative;
+z-index: -1;
+}
+
+.heart_lines{
+  background-image: url("@{img-path}/about/about_sprite.png");
+  background-position: 0 0;
+  width: 178px;
+  height: 312px;
+  top: 102px;
+  left:0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.heart_desc{
+  position: absolute;
+  z-index: 1;
+  top: 275px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 764px;
+  p{
+    background:rgba(0, 38, 228, 0.85);
+    .secondary_font;
+    color: @white;
+    font-size: 16px;
+    margin-bottom: 3px;
+    .inline-block;
+    line-height: 20px;
+    &:first-child{
+      padding-left:40px;
+      padding-right:40px;
+    }
+    &:last-child{
+      width: 390px;
+      line-height: 8px;
+      padding-top: 8px;
+    }
+  }
+}
+
+@keyframes glitch_abt{
+  @iterations: 20;
+  .loop (@i) when (@i > 0) {
+    @percent: (@i/@iterations)*100%;
+    @rand: `Math.floor((Math.random() * 100) + 1)`;
+    @{percent} {
+  	  clip:rect(unit(@rand,px),9999px, unit(@rand,px),0);
+    }
+    .loop(@i - 1);
+  }
+  .loop(@iterations);
+}
+
+@keyframes glitch_abt_after{
+  @iterations: 20;
+  .loop (@i) when (@i > 0) {
+    @percent: (@i/@iterations)*100%;
+    @rand: `Math.floor((Math.random() * 100) + 1)`;
+    @{percent} {
+	  clip:rect(unit(@rand,px),9999px, unit(@rand,px),0);
+    }
+    .loop(@i - 1);
+  }
+  .loop(@iterations);
+}
+
+.heart_desc p{
+  	position: relative;
+	  color:#fff;
+		&:after{
+			content:attr(data-text);
+			position:absolute;
+			left: 40px;
+			text-shadow: -1px 0 fade(@secondary-color, 50%);
+			top: -1px;
+			color:@secondary-color;
+			overflow:hidden;
+			clip:rect(0,900px,0,0);
+			-webkit-animation:glitch_abt 5s infinite linear alternate-reverse;
+		}
+
+		&:before{
+			content:attr(data-text);
+			position:absolute;
+			left: 40px;
+			text-shadow: 1px 0 #fff;
+			top: -1px;
+			color:#fff;
+			overflow:hidden;
+			clip:rect(0,900px,0,0);
+			-webkit-animation:glitch_abt_after 6s infinite linear alternate-reverse;
+		}
+    &.br_line{
+      &:after{
+        top: 6px;
+      }
+      &:before{
+      top: 3px;
+      }
+    }
+}
+
+.abt_design_love{
+  .left_vertical_section{
+    margin-top: 20px;
+    top: 90%;
+  }
+}

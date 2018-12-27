@@ -1,0 +1,78 @@
+// File Name: _section_1.less
+// Description: Ovegano text fill and Image hide animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.s_2{
+margin-top: 80px;
+  &_leaf{
+    width: 100%;
+    text-align: center;
+  }
+  &_title{
+    .base_font;
+    text-align: center;
+      h2{
+        .atg_l_titles;
+          margin-top: 10px;
+      }
+      p{
+        font-size:18px;
+        line-height: 34px;
+        font-weight: lighter;
+        margin-top: 25px;
+        .letter_spacing_ph(5);
+      }
+  }
+  &_macbook{
+    margin-top: 120px;
+    .inline-block;
+    .s_2_left{
+      float: left;
+        img{
+          width: 100%;
+          .block;
+        }
+    }
+    .s_2_right{
+      float:right;
+      width: 100px;
+    }
+    .macbook_frame{
+      background:transparent url("@{sub_img-path}/home/atg/mac_book.png");
+      width: 958px;
+      height: 606px;
+      position: relative;
+      overflow: hidden;
+        span{
+          position: relative;
+          top: 27px;
+          left: 97px;
+          width: 792px;
+          height: 504px;
+          float: left;
+          overflow: hidden;
+            img{
+              position: absolute;
+              top: 0;
+            }
+        }
+    }
+  }
+}
+
+.atg_sm_slider{
+  width: 140px;
+  margin-top: 175px;
+    .atg_slider_item{
+      float: left;
+      text-align: center;
+       span{
+         color: @secondary-color;
+         .base_regular_font;
+         font-size: 18px;
+         .letter_spacing_ph(60);
+       }
+    }
+}

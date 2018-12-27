@@ -1,0 +1,61 @@
+// File Name: _menu.less
+// Description: Navigation for all pages
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+@keyframes a_ltr_sp{
+    0%{
+      .letter_spacing_ph(380);
+    }
+    100%{
+      .letter_spacing_ph(2240);
+    }
+}
+
+@keyframes a_ltr_sp_in{
+    from{
+      .letter_spacing_ph(2240);
+    }
+    to{
+      .letter_spacing_ph(380);
+    }
+}
+
+
+
+.nav_links{
+  li{
+    &.nav_about{
+      margin-left: 80px;
+      a{
+        .cross_sign(40px 0 0 5px);
+        .letter_spacing_ph(380);
+          .nav_animation(a_ltr_sp_in);
+      }
+      span.nav_bg{
+        background-image: url("@{img-path}/menu/about.gif");
+        .nav_animation(h_w_out);
+
+          &:before{
+            left: 0;
+            top: 5px;
+          }
+      }
+      p{
+        right:97px;
+        opacity: 0;
+      }
+      &:hover{
+          a{
+           .nav_animation(a_ltr_sp);
+           }
+          span.nav_bg{
+            .nav_animation(h_w_in);
+          }
+          p{
+            .nav_animation(nav_desc);
+          }
+        }
+    }
+  }
+}

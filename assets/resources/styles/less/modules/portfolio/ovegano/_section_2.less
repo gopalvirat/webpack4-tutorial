@@ -1,0 +1,213 @@
+// File Name: _section_2.less
+// Description: Section 2
+// Used by: _home.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.the_design_section{
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.kachori_corner{
+position: absolute;
+top: 75px;
+left: 0;
+z-index: 1;
+}
+
+.kachori_content{
+  position: absolute;
+  top: 90px;
+  left:30.5%;
+  width: 670px;
+  h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 18px;
+    color: #000;
+    font-family: 'proxima_nova_ltsemibold';
+  }
+  p{
+    color: #0c0c0c;
+    .base_font;
+      font-size: 16px;
+      line-height:28px;
+      text-align: justify;
+      margin: 75px 0 0 75px;
+  }
+}
+
+.salad_section{
+    position: relative;
+    width: 100%;
+
+}
+
+
+// mixin to add top left
+.sprite-cal-salad(@t, @l, @x: 0, @y: 0, @width, @height ){
+    top: @t;
+    left: @l;
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+.salad_base{
+   //background-image:url("@{img-path}/salad_dummy.png");
+    position: relative;
+    float: right;
+    width: 786px;
+    height: 594px;
+}
+
+
+.salad_base{
+  span{
+      background-image:url("@{sub_img-path}/portfolio/ovegano/salad_base.png");
+      position: absolute;
+  }
+  .s_seq{
+     opacity: 0;
+     visibility: hidden;
+
+  }
+  .salad{
+    &_seq_base{
+      //.sprite-cal-al(138px, auto, -284px, -124px, 391px, 340px);
+      .sprite-cal-salad(auto, auto, -284px, -124px, 391px, 340px);
+      right:0;
+      bottom: 0;
+        //animation: animate 2.5s linear alternate infinite;
+    }
+      &_seq_1{
+        //------------top, left, x, y, width, height
+        .sprite-cal-salad(-33px, -115px, -485px, -19px, 110px, 71px);
+      }
+      &_seq_2{
+        .sprite-cal-salad(-56px, 55px, -137px, -196px, 141px, 105px);
+      }
+      &_seq_3{
+        .sprite-cal-salad(44px, 10px, -17px, -84px, 116px, 80px);
+      }
+      &_seq_4{
+        .sprite-cal-salad(0px, 37px, -4px, -300px, 274px, 170px);
+      }
+      &_seq_5{
+        .sprite-cal-salad(20px, 313px, -52px, -15px, 61px, 52px);
+      }
+      &_seq_6{
+        .sprite-cal-salad(34px, 156px, -114px, -18px, 79px, 59px);
+      }
+      &_seq_7{
+        .sprite-cal-salad(38px, 314px, -197px, -1px, 75px, 76px);
+      }
+      &_seq_8{
+        .sprite-cal-salad(105px, auto, -5px, -16px, 47px, 49px);
+        right: 357px;
+      }
+      &_seq_9{
+          .sprite-cal-salad(73px, 280px, -337px, 0px, 133px, 112px);
+      }
+      &_seq_10{
+        .sprite-cal-salad(114px, auto, -161px, -97px, 102px, 75px);
+        right: 317px;
+      }
+      &_seq_11{
+        .sprite-cal-salad(111px, auto, -601px, -11px, 54px, 112px);
+        right: 348px;
+      }
+      &_seq_12{
+        .sprite-cal-salad(62px, auto, -7px, -175px, 94px, 128px);
+        right: 297px;
+      }
+      &_seq_13{
+        .sprite-cal-salad(180px, auto, -283px, -24px, 36px, 35px);
+        right: 283px;
+      }
+  }
+}
+
+
+.ovegano_g-logo{
+    float: left;
+    background-image:url("@{sub_img-path}/portfolio/ovegano/ovegano_logo-g.png");
+    width: 268px;
+    height: 80px;
+    position: absolute;
+    left: 300px;
+    top: 350px;
+    background-position: -2px -1px;
+        span{
+          background-image:url("@{sub_img-path}/portfolio/ovegano/ovegano_logo-g.png");
+          position: absolute;
+        }
+      .logo_g{
+          background-position: 0px -88px;
+          width: 52px;
+          height: 56px;
+          left: 108px;
+          top:0px;
+          z-index: 1;
+      }
+      .ovegano_spoon{
+        background-position: -60px -87px;
+        width: 75px;
+        height: 87px;
+        left: 166px;
+        top: -129px;
+        opacity: 0;
+
+      }
+}
+
+.ovegano_g_desc{
+  font-size: 16px;
+  margin-top: 35px;
+  color: #e04552;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 415px;
+  width: 450px;
+  left: 240px;
+}
+
+.salad_left_section{
+  float: left;
+  width: 494px;
+  position: relative;
+}
+.dummy-bg{
+  background: blue;
+  width: 800px;
+  height: 800px;
+  clear: both;
+}
+
+
+.branding_puff{
+  float: left;
+  margin-top: 40px;
+}
+.branding_content{
+  float: right;
+  width: 50%;
+  margin-top: 150px;
+  text-align: center;
+    h3{
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p{
+      font-size: 13px;
+      line-height: 25px;
+      letter-spacing: 1px;
+      .base_font;
+      width: 420px;
+      margin: 20px auto;
+    }
+}

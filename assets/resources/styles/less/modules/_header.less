@@ -1,0 +1,138 @@
+// File Name: _header.less
+// Description: header containing logo and menu animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.header_cont{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:40px 20px 0 80px;
+  //z-index: 1;
+}
+
+.logo{
+  float: left;
+  width: 50px;
+    img{
+      max-width: 100%;
+    }
+}
+
+.home_menu_bg{
+  background: @secondary-color;
+  height: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  width: 82px;
+  top: 0;
+}
+.menu_icon{
+  float: right;
+  position: relative;
+  cursor: pointer;
+  z-index: 12;
+  width: 36px;
+  height: 46px;
+  margin-right: -2px;
+  a{
+    color: @white;
+    position: relative;
+    .secondary_font;
+    font-size: 12px;
+    color: #131313;
+    text-transform: uppercase;
+    .letter_only_spacing(360);
+    font-weight: 600;
+    vertical-align: top;
+  }
+  &:before,
+  &:after{
+    content: "";
+    width: 3px;
+    height: 38px;
+    background:#131313;
+    left: -3px;
+    position: absolute;
+    top: 0;
+  }
+  &:after{
+    left: 7px;
+  }
+  &.active{
+    z-index: 11;
+    position: fixed;
+    right: 33px;
+    &:after,
+    &:before{
+      background: @white;
+      transform: rotate(135deg);
+      left: 0;
+      //animation: close_glitch-2 3s infinite linear alternate-reverse;
+    }
+    &:before{
+      transform: rotate(-135deg);
+      //animation: close_glitch-2 2s infinite linear alternate-reverse;
+    }
+    a{
+      color: @white;
+      &:after,
+      &:before{
+        animation: none !important;
+      }
+    }
+  }
+}
+.glitch_menu {
+  @offset1: 2px;
+  @offset2: -2px;
+  @highlight1: @secondary-color;
+  @highlight2: spin(@highlight1, 180);
+  position: relative;
+  display: inline-block;
+  &::before,
+  &::after  {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @secondary-color;
+  }
+
+  &::before {
+    left: @offset1;
+    text-shadow: -2px 0 @highlight1;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    left: @offset2;
+    text-shadow: -2px 0 @highlight2;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+  }
+}
+
+.glitch-frames (@n: 20, @index: 0) when (@index <= @n) {
+  @keyframeSel: percentage(@index/@n);
+  @rand1: unit(round(`Math.random()*150`),px);
+  @rand2: unit(round(`Math.random()*150`), px);
+  @{keyframeSel} {
+    clip: rect(@rand1, 9999px, @rand2, 0);
+  }
+  .glitch-frames(@n, (@index + 1));
+}
+
+@keyframes glitch-anim {
+  .glitch-frames(24);
+}
+
+@keyframes glitch-anim-2 {
+  .glitch-frames(30,2);
+}

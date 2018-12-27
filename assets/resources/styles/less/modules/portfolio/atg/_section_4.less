@@ -1,0 +1,98 @@
+// File Name: _section_3.less
+// Description: Seeds and life section
+// Used by: portfolio.less
+// Dependencies:
+// ------------------------------------------------------------
+.section_4_cont{
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.s_4{
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  &_header{
+    width: 600px;
+    margin: auto;
+      h4{
+        .atg_titles;
+        margin-bottom: 5px;
+        font-size: 29px;
+      }
+      p{
+        margin-bottom:25px;
+        font-size: 13px;
+        line-height: 28px;
+        .letter_spacing_ph(25);
+      }
+  }
+  &_ipad{
+    position: relative;
+    width: 100%;
+    h4{
+      .atg_titles;
+      margin-bottom: 10px
+    }
+    p,
+    span
+    {
+      font-size: 24px;
+      line-height: 28px;
+      .letter_spacing_ph(60);
+      .t_u-case;
+      .base_regular_font;
+      font-weight: bold;
+    }
+    span{
+      .inline-block;
+      font-size: 18px;
+      color: @secondary-color;
+    }
+    figure{
+      margin-top: 70px;
+    }
+    .s_4_seeds_desc{
+      width: 320px;
+      position: absolute;
+      bottom: 150px;
+      right:0px;
+      h4{
+        .atg_titles;
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 14px;
+        .base_font;
+        text-align: right;
+        font-weight: normal;
+        text-transform: none;
+        line-height: 24px;
+      }
+    }
+  }
+  &_branding{
+    text-align: center;
+    padding-top: 18px;
+    position: relative;
+      h4{
+        .atg_titles;
+        position: absolute;
+        right: 206px;
+        top: 80px;
+      }
+      figure{
+        margin: 21px 0 0 132px
+      }
+  }
+}
+
+// Path
+.atg_path_cont{
+  position: absolute;
+  top: -140px;
+  z-index: -1;
+  left: 201px;
+}

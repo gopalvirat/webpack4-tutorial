@@ -1,0 +1,78 @@
+// File Name: _contact.less
+// Description: contact link
+// Used by: _menu.less
+// Dependencies:
+// ------------------------------------------------------------
+@keyframes ct_ltr_sp{
+    0%{
+      .letter_spacing_ph(380);
+    }
+    100%{
+      .letter_spacing_ph(1840);
+    }
+}
+
+@keyframes ct_ltr_sp_in{
+    0%{
+      .letter_spacing_ph(1840);
+    }
+    100%{
+      .letter_spacing_ph(380);
+    }
+}
+
+@nav_ct_w: 620px;
+
+@keyframes ct_w_in{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: @nav_ct_w;
+  }
+}
+
+@keyframes ct_w_out{
+  0%{
+    width: @nav_ct_w;
+  }
+  100%{
+    width: 0px
+  }
+}
+
+.nav_links{
+  li{
+    &.nav_contact{
+      left: 148px;
+      a{
+        .cross_sign(42px 0 0 2px);
+        .letter_spacing_ph(380);
+        .nav_animation(ct_ltr_sp_in);
+      }
+      span.nav_bg{
+        background-image: url("@{img-path}/menu/contact.gif");
+        .nav_animation(ct_w_out);
+          &:before{
+            left: 0;
+            top: 5px;
+          }
+      }
+      p{
+        right:76px;
+        opacity: 0;
+      }
+      &:hover{
+          a{
+           .nav_animation(ct_ltr_sp);
+           }
+          span.nav_bg{
+            .nav_animation(ct_w_in);
+          }
+          p{
+            .nav_animation(nav_desc);
+          }
+        }
+    }
+  }
+}

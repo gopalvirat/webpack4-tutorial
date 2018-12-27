@@ -1,1 +1,1 @@
-# Webpack 4 front-end guide
+# Coded by @piyushwalia

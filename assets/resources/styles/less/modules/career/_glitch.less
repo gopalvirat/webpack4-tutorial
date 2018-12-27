@@ -1,0 +1,153 @@
+/*------------------------------------*\
+    $Functions
+\*------------------------------------*/
+
+@steps: 20;
+
+.makeRandom1(@min: 0, @max: @min+1, @int: 0) {
+  .checkInt() {
+    @getNum: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
+  }
+  .checkInt();
+  @randNum1: @base + @min;
+}
+
+.makeRandom2(@min: 0, @max: @min+1, @int: 0) {
+  .checkInt() {
+    @getNum: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
+  }
+  .checkInt();
+  @randNum2: @base + @min;
+}
+
+@keyframes glitchOne{
+  .mixin-loop (@index) when (@index > 0) {
+    .makeRandom1(0, 100, 1);
+    .makeRandom2(0, 100, 1);
+    @percent: percentage(@index*(1/@steps));
+    @{percent}{
+      clip: rect(unit(@randNum1, px), 9999px, unit(@randNum2, px),0);
+    }
+    .mixin-loop(@index - 1);
+  }
+  .mixin-loop(0) {}
+  .mixin-loop(@steps);
+}
+
+@keyframes glitchTwo{
+  .mixin-loop (@index) when (@index > 0) {
+    .makeRandom1(0, 100, 1);
+    .makeRandom2(0, 100, 1);
+    @hash: #;
+    @percent: percentage(@index*(1/@steps));
+    @{hash}@{percent}{
+      clip: rect(unit(@randNum1, px), 9999px, unit(@randNum2, px),0);
+    }
+    .mixin-loop(@index - 1);
+  }
+  .mixin-loop(0) {}
+  .mixin-loop(@steps);
+}
+
+
+
+
+// For career page
+@keyframes gl_shadow {
+  0% {
+      text-shadow:3px -2px 0px rgba(26, 64, 255, 0.60), -1px 2px 0px rgba(26, 255, 223, 0.6), -3px 2px 0px rgba(255, 26, 237, 0.75);
+
+  }
+  20% {
+      text-shadow:6px 2px 0px rgba(26, 64, 255, 0.50), -2px 3px 0px rgba(26, 255, 223, 0.6), 2px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+
+  40% {
+      text-shadow:8px -3px 0px rgba(26, 64, 255, 0.4), 4px 3px 0px rgba(26, 255, 223, 0.6), 3px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+  60% {
+    text-shadow:4px 1px 0px rgba(26, 64, 255, 0.6), 1px 3px 0px rgba(26, 255, 223, 0.6), -4px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+  80% {
+      text-shadow:-4px -4px 0px rgba(26, 64, 255, 0.3), -3px 2px 0px rgba(26, 255, 223, 0.6), 2px 1px 0px rgba(255, 26, 237, 0.75);
+  }
+100% {
+      text-shadow:3px 2px 0px rgba(26, 64, 255, 0.60), -1px 2px 0px rgba(26, 255, 223, 0.6), -3px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+}
+
+@keyframes gl_slice {
+  0% {
+    transform: translate(0);
+    text-shadow:3px 2px 0px rgba(26, 64, 255, 0.60), 1px 2px 0px rgba(26, 255, 223, 0.6), 1px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+  20% {
+  transform: translate(-5px, 0px);
+   text-shadow:6px -2px 0px rgba(26, 64, 255, 0.50), -2px 3px 0px rgba(26, 255, 223, 0.6), 2px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+  21% {
+    transform: translate(-4px, 0px);
+     text-shadow:8px 5px 0px rgba(26, 64, 255, 0.4), -4px 3px 0px rgba(26, 255, 223, 0.6), 3px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+
+  60% {
+    transform: translate(0px, 0px);
+    text-shadow:4px -1px 0px rgba(26, 64, 255, 0.6), -2px 3px 0px rgba(26, 255, 223, 0.6), 4px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+  61% {
+    transform: translate(1px, 0px);
+      text-shadow:-4px 2px 0px rgba(26, 64, 255, 0.3), 1px 2px 0px rgba(26, 255, 223, 0.6), 2px 1px 0px rgba(255, 26, 237, 0.75);
+  }
+  100% {
+    transform: translate(0);
+      text-shadow:3px 2px 0px rgba(26, 64, 255, 0.60), 1px 2px 0px rgba(26, 255, 223, 0.6), 1px 2px 0px rgba(255, 26, 237, 0.75);
+  }
+}
+
+@keyframes frame_glitch{
+  0%   { transform: translateX( 0.0px) }
+  25%  { transform: translateX(-0.5px) }
+  50%  { transform: translateX( 0.0px) }
+  75%  { transform: translateX( 0.5px) }
+  100% { transform: translateX( 0.0px) }
+}
+
+@keyframes frame_v_glitch{
+  0%   { transform: translateY( 0.0px) }
+  49%  { transform: translateY( 0.0px) }
+  50%  { transform: translateY( -13.0px) }
+  51%  { transform: translateY( 0.0px) }
+  100% { transform: translateY( 0.0px) }
+}
+
+
+@keyframes demand_glitch{
+  0%   { transform: translate(0px,0) }
+  15%  { transform: translate( 1px,1);}
+  16%  { transform: translate( 5px,-1); }
+  17%  { transform: translate( -4px,-1) }
+  29%  { transform: translate( -2px,-5) }
+  35%  { transform: translate( -8px,0) }
+  36%  { transform: translate( -7px,0) }
+  50%  { transform: translate( 2px,0) }
+  51%  { transform: translate( 0px,0) }
+  60%  { transform: translate( -2.0px,0) }
+  61%  { transform: translate( -3.0px,0) }
+  75%  { transform: translate( -2px,0) }
+  100% { transform: translate( 0.0px,0) }
+}
+
+@keyframes demand_glitch_clip{
+  0%   { transform: translate(0px,0) }
+  15%  {transform: translate( 2px,0)}
+  16%  {transform: translate( -1px,0)}
+  20%  { transform: translate( 0px,0)}
+  35%  { transform: translate( -5px,0)}
+  36%  { transform: translate( -2px,0)}
+  37%  { transform: translate( 0px,0)}
+  50%  { transform: translate( -3px,0); }
+  51%  { transform: translate( 0.0px,0) }
+  100% { transform: translate( 0.0px,0) }
+}

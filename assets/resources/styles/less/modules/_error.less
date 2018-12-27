@@ -1,0 +1,44 @@
+// File Name: _error.less
+// Description: 404 error page
+// Used by: page.less
+// Dependencies:
+// ------------------------------------------------------------
+.error_p_cont{
+  text-align: center;
+  .middle;
+    h4{
+      font-size: 22px;
+      font-weight: normal;
+      .font_extend;
+      .letter_only_spacing(840);
+      text-indent: 70px;
+      text-transform: uppercase;
+    }
+    .error_code{
+      margin-top: 30px;
+      span{
+        .inline-block;
+        vertical-align: top;
+      }
+      .error_no{
+        .base_font;
+        font-size: 227px;
+        line-height: 0.8em;
+        font-weight: 700;
+      }
+    }
+    .error_link{
+      margin-top: 30px;
+      color: @white;
+      width: 500px;
+      background-color: @secondary-color;
+      text-transform: uppercase;
+      font-family: 'Telegraph Clean';
+      letter-spacing: 0.38em;
+      text-indent: 0.38em;
+      font-size: 18px;
+      padding: 1px 0;
+      position: relative;
+      .inline-block;
+    }
+}

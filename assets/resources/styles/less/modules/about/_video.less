@@ -1,0 +1,162 @@
+// File Name: _video.less
+// Description: video effects
+// Used by: _about.less
+// Dependencies:
+// ------------------------------------------------------------
+
+
+
+.abt_video_section{
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  //height: 540px;
+  padding-top: 54%;
+}
+.video_placeholder{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+    video{
+      display: block;
+      width: 100%;
+    }
+
+}
+.video_bg{
+  background: @secondary-color;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  left:26px;
+  top:58px;
+  z-index: 1;
+
+    p{
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      .secondary_font;
+      font-size: 70px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: @white;
+      right: 80px;
+    }
+}
+
+.video_play_btn{
+.video_play_title;
+  width: 100%;
+  z-index: 4;
+  top: 50%;
+  //margin-top: -20px;
+  position: absolute;
+
+}
+
+.video_scroller{
+  position: absolute;
+  left: 3px;
+  top: -76px;
+  z-index: 5;
+    .vd_scroller_bar{
+      height: 226px;
+      position: absolute;
+    }
+}
+
+.half_square
+{
+  .top_bar,
+  .bottom_bar{
+    background: @black;
+    width: 25px;
+    height: 4px;
+    left: 0px;
+    position: absolute;
+      &:before{
+        content: "";
+        width: 4px;
+        height: 25px;
+        position: absolute;
+        background: @black;
+      }
+  }
+  .bottom_bar{
+    bottom: 0;
+      &:before{
+        right: 0;
+        bottom: 0;
+      }
+  }
+}
+
+
+.half_square .middle_track{
+  background-image: url("@{img-path}/about/about_track.png");
+  width: 8px;
+  left: 8px;
+  top: 14px;
+  position: absolute;
+  height: 199px;
+  background-repeat: repeat-y;
+  cursor: pointer;
+  z-index: 6;
+  &:hover{
+      animation: slide 20s linear infinite;
+  }
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 0px -1000px; }
+}
+
+.scrollbar_content{
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+}
+.mute-video{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: transparent url("@{img-path}/about/unmute.png") no-repeat;
+  width: 32px;
+  height: 26px;
+  border: none;
+  outline: none;
+  z-index: 9;
+  .hide-text;
+  &.unmute-video{
+    background: transparent url("@{img-path}/about/mute.png") no-repeat;
+    height: 8px;
+  }
+}
+.abt_v_frg{
+  position: absolute;
+  left: -169px;
+  right: 0;
+  top: -103px;
+  bottom: 0;
+  z-index: -1;
+    .frg_1{
+      background: transparent url("@{img-path}/about/video_placeholder.png") no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+       clip-path: inset(10px 20px 30px 40px);
+
+    }
+}
+.abt_v_frg svg {
+    clip-path: url(~#theSVGPath);
+}

@@ -1,0 +1,35 @@
+// File Name: _section_3.less
+// Description: Seeds and life section
+// Used by: portfolio.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.s_3{
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  &_title{
+    font-family: 'Sophia';
+    font-size:145px;    
+    color: @black;
+  }
+  &_info{
+      font-size: 20px;
+      .letter_spacing_ph(1060);
+        line-height: 35px;
+        .t_u-case;
+        position: absolute;
+        font-weight: bold;
+        .base_regular_font;
+        text-align: left;
+        right: 0;
+        top: 50%;
+        span{
+          .block;
+        }
+  }
+}
+
+.bn_cont{
+  position: relative;
+}

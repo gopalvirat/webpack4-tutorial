@@ -1,0 +1,380 @@
+// File Name: _contact.less
+// Description: Contact Us page
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.contact_page{
+  background:@white
+}
+
+.center_contact{
+  margin: auto;
+  width: 1000px;
+}
+
+.ct_content_panel{
+  width: 100%;
+  clear: both;
+  margin-top: 100px;
+  .float;
+}
+
+.ct_left_pnl{
+  float: left;
+  width: 56%;
+  margin-top: 50px;
+}
+
+.ct_right_pnl{
+  float: right;
+  width: 40%;
+  margin-top: -40px;
+  position: relative;
+}
+.ct_heading{
+  width: 100%;
+  text-align: center;
+  margin-top: 130px;
+    h1{
+        .titles_bundle;
+      color: @black;
+      margin: 0;
+    }
+    p{
+      color: #010101;
+      .base_font;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+}
+
+
+
+.ct_form {
+  .button_cont{
+    position: relative;
+    margin-top: 40px;
+      &:hover{
+        .bottom_layer{
+          top: 0;
+          left: 0;
+        }
+      }
+  }
+}
+
+@hello_color: #1a40ff;
+@hello_color_alt: #e77980;
+
+@keyframes move {
+    0% {
+      text-shadow: -4px 0px 0px fade(@hello_color,50%), 0px 0px 0px fade(@hello_color_alt, 0%);
+    }
+    25% {
+      text-shadow: -6px 0px 0px fade(@hello_color,30%), 0px -2px 0px fade(@hello_color_alt, 80%);
+    }
+    50% {
+      text-shadow: 0px 0px 0px fade(@hello_color, 0%), 0px -3px 0px fade(@hello_color_alt, 50%);
+    }
+    75% {
+      text-shadow: 4px 0px 0px fade(@hello_color,30%), 0px -2px 0px fade(@hello_color_alt, 80%);
+    }
+    100% {
+      text-shadow: -4px 0px 0px fade(@hello_color,50%), 0px 0px 0px fade(@hello_color_alt, 0%);
+    }
+}
+
+
+.left_vertical_section{
+  .vertical-middle();
+  position: absolute;
+  .original{
+    .transform(-6px,0,90deg) !important;
+    .letter_spacing_ph(1060);
+    .float;
+    .secondary_font(14px);
+    font-weight: bold;
+    color:@secondary-color;
+  }
+}
+.say_hello
+{
+    animation: move 10s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.ct_bottom_pnl{
+    margin-top: 62px;
+    clear: both;
+    width: 100%;
+    position: relative;
+      *{
+        vertical-align: top;
+      }
+}
+
+.web_link{
+  .inline-block;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  vertical-align: top;
+  a{
+      color: @black;
+      .secondary_font(12px);
+      font-weight: bold;
+      .letter_spacing_ph(60);
+    }
+}
+
+.creative_desc{
+  float: right;
+  color: @secondary-color;
+  .secondary_font(12px);
+  text-transform: uppercase;
+  .letter_only_spacing(600);
+  text-align: left;
+  width: 150px;
+}
+
+.ct_address_cont{
+  .inline-block;
+  width: 180px;
+  position: relative;
+  z-index: 1;
+  li{
+      .secondary_font(12px);
+      font-weight: bold;
+      margin-bottom: 10px;
+      .inline-block;
+      cursor: pointer;
+      &.current{
+        color: @secondary-color;
+      }
+  }
+  address{
+    color: @secondary-color;
+    .secondary_font(12px);
+    font-style: normal;
+    .letter_spacing_ph(60);
+    line-height: 18px;
+  }
+}
+.tab_content{
+	display: none;
+  &.current{
+    display: inherit;
+  }
+}
+.ct_bg-cont{
+  position: absolute;
+  width: 330px;
+  height: 650px;
+  right: 30%;
+}
+
+
+
+.girl_pic{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+    .gl_eye{
+      background-image: url("@{root_img-path}/contact/ct_bg-sprite.png");
+      background-position: 0px -343px;
+      width: 61px;
+      height: 35px;
+      position: absolute;
+      top: 143px;
+      left: 116px;
+      display: none;
+    }
+    img{
+      display: block;
+    }
+}
+.brain_flowers{
+  position: absolute;
+  background-image: url("@{root_img-path}/contact/ct_bg-sprite.png");
+  width: 248px;
+  height: 168px;
+  right: 37px;
+  top: 166px;
+  z-index: 1;
+  background-position:0 0;
+}
+
+.brain_sketch{
+  position: relative;
+  z-index: 1;
+
+}
+
+.ct_color_bg{
+   background-image: url("@{root_img-path}/contact/bg_gradiant.png");
+   background-repeat: no-repeat;
+   background-position:left bottom;
+   background-color:  transparent;
+   position: fixed;
+   bottom: 0;
+   right: 16%;
+   width: 776px;
+   height: 654px;
+   z-index: -1;
+}
+
+.brain_sketch{
+    .brain_body{
+      background-image: url("@{root_img-path}/contact/ct_bg-sprite.png");
+      background-position:-3px -181px;
+      width: 226px;
+      height: 151px;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      margin: auto;
+      animation: animate 2.5s linear alternate infinite;
+    }
+    .brain_wave{
+      background-image: url("@{root_img-path}/contact/ct_bg-sprite.png");
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+    .wave{
+        &_1{
+          width:126px;
+          height: 7px;
+          background-position:  0 -353px;
+          left: 246px;
+          top: 37px;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &_2{
+          width:165px;
+          height:18px;
+          background-position: 0 -365px;
+          left: 257px;
+          top: 49px;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &_3{
+          width: 108px;
+          height: 9px;
+          background-position:-137px -347px;
+          left: 275px;
+          top: 96px;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &_4{
+          width: 74px;
+          height: 9px;
+          background-position:-184px -367px;
+          left: 250px;
+          top: 135px;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &_5{
+          width:159px;
+          height:15px;
+          background-position:-1px -393px;
+          position: static;
+          float: right;
+        }
+        &_6{
+          width:85px;
+          height:6px;
+          background-position:-178px -394px;
+          position: static;
+          float: right;
+        }
+        &_7{
+          width:145px;
+          height:14px;
+          background-position:-5px -418px;
+          position: static;
+          float: right;
+        }
+    }
+
+}
+
+.position_right_5,
+.position_right_6,
+.position_right_7,
+{
+  position: absolute;
+    top: 31px;
+    right: 247px;
+    overflow: hidden;
+    width: 159px;
+    height: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.position_right_6{
+  top: 72px;
+  right: 275px;
+  width: 85px;
+}
+.position_right_7{
+width: 145px;
+top: 108px;
+right: 261px;
+}
+/* form starting stylings ------------------------------- */
+.group{
+  position:relative;
+  margin-bottom:45px;
+  clear: both;
+  input{
+    .secondary_font;
+     font-size: 14px;
+     letter-spacing: 1px;
+     color: #141414;
+     font-weight: bold;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    background-color: transparent;
+    border-bottom: 1px solid @black;
+  }
+
+  label 				 {
+    .secondary_font;
+     font-size: 14px;
+     letter-spacing: 1px;
+     color: #141414;
+     font-weight: bold;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+  }
+
+}
+.con_field_pair{
+    .group{
+      margin-bottom: 40px;
+      float: left;
+      width: 45%;
+      clear: none;
+      &.con_phone_field{
+        float: right;
+      }
+    }
+  }

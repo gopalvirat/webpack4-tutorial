@@ -1,0 +1,112 @@
+// File Name: _section_1.less
+// Description: Ovegano text fill and Image hide animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.pt_center{
+  width: 1060px;
+  margin: auto;
+}
+
+.home_portfolio{
+  width: 100%;
+}
+
+.section_1{
+height: 100vh;
+}
+
+.inner_cont{
+  .middle;
+  text-align: center;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 83px;
+    font-size: 4vw;
+    font-weight: bold;
+    .base_font;
+    margin: 0;
+  }
+  p{
+    .base_font;
+    font-size: 16px;
+    font-size: 0.8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    .letter_spacing_ph(260);
+  }
+}
+
+
+.atg_anim_elem(@x: 0, @y: 0, @width, @height, @top, @left){
+    position: absolute;
+    top: @top;
+    left:@left;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    //.transition(all, .5s, ease-in);
+      @media @Xl_desktop{
+        transform: scale(0.9);
+      }
+        @media @l_desktop{
+          transform: scale(0.8);
+        }
+        @media @l_tablet{
+          transform: scale(0.7);
+        }
+      span{
+        background-image: url("@{sub_img-path}/home/atg/atg_header_sprite.png");        
+        background-repeat: no-repeat;
+        width: @width;
+        height: @height;
+        background-position: @x @y;
+        position: absolute;
+      }
+};
+
+.s_1{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elem{
+  &_1{
+      .atg_anim_elem(-445px, -1px, 205px, 208px, 10px, -80px);
+  }
+  &_2{
+      .atg_anim_elem(-699px, -211px, 300px, 476px, 50%, -30px);
+  }
+  &_3{
+      .atg_anim_elem(-225px, 0px, 202px, 160px, 26%, 18%);
+  }
+  &_4{
+      .atg_anim_elem(-685px, -1px, 313px, 207px, -55px, 45.5%);
+  }
+  &_5{
+      .atg_anim_elem(0, 0, 224px, 259px, 100%, 37%);
+      margin-top: -265px;
+  }
+  &_6{
+      .atg_anim_elem(-303px, -403px, 221px, 229px, 20%, auto);
+      right: 37%;
+      @media @Xl_desktop{
+        right: 33%;
+      }
+
+  }
+  &_7{
+      .atg_anim_elem(-275px, -170px, 152px, 134px, 64%, auto);
+      right: 41%;
+  }
+  &_8{
+      .atg_anim_elem(-7px, -274px, 267px, 352px, 33%, auto);
+      right: 11%;
+  }
+  &_9{
+      .atg_anim_elem(-436px, -255px, 222px, 169px, 84%, auto);
+      right: 7%;
+  }
+}

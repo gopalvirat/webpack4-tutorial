@@ -1,0 +1,448 @@
+// File Name: _nina_english.less
+// Description: Nina english Portfolio
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+
+@ne_Sprite_path: url("@{img-path}/portfolio/ne/ne_sprite.png");
+
+
+.ne_header{
+  background-image: url("@{img-path}/portfolio/ne/header_bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  .ne_center{
+    position: relative;
+    height: 100%;
+  }
+}
+
+.ne_center{
+  margin: auto;
+  width: 880px;
+}
+
+.hd_l_sec{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.hd_r_sec{
+  position: absolute;
+  left:350px;
+  bottom: 392px;
+   h1{
+       .text-hide();
+       background-image: @ne_Sprite_path;
+       width: 420px;
+       height: 176px;
+       background-repeat: no-repeat;
+       background-position: 0 0;
+   }
+}
+
+.learn_w_love{
+  background-image: @ne_Sprite_path;
+  position: absolute;
+  background-position:-587px -16px;
+  width: 406px;
+  height: 377px;
+  left: -54px;
+  margin-top: 15px;
+    span{
+          font-family: 'amatic_scregular';
+          font-size: 58px;
+          font-weight: bold;
+          .letter_spacing_ph(18);
+          text-transform: uppercase;
+          color: @white;
+          width: 162px;
+          top: 142px;
+          left: 116px;
+          position: absolute;
+    }
+}
+.h_fl_birds{
+  background-image: @ne_Sprite_path;
+  position: absolute;
+}
+
+.hd_bird_1{
+      .sprite-cal-al(23%, 35%, -13px, -222px, 76px, 56px);
+}
+.hd_bird_2{
+      .sprite-cal-al(16%, auto, -117px, -222px, 90px, 78px);
+      right:10%;
+}
+.hd_bird_3{
+      .sprite-cal-al(45%, auto, -234px, -215px, 72px, 70px);
+      right: 2%;
+}
+
+.ne_sec_2{
+  margin-top: 60px;
+  text-align: center;
+  .pf_titles{
+    font-size: 36px;
+  }
+}
+.pf_title_desc{
+  font-size: 14px;
+  width: 620px;
+  margin:20px auto 0 auto;
+}
+.ne_screen_slider{
+  margin-top: 50px;
+  margin-bottom: 50px;
+    .ne_web_item{
+      width: 520px;
+      margin: auto;
+    }
+    .owl-nav{
+      position: absolute;
+      top: 50%;
+      margin-top: -76px;
+      width: 100%;
+    }
+    .owl-next,
+    .owl-prev
+    {
+      background-image:@ne_Sprite_path;
+      .sprite-cal(-448px, -18px, 100px, 76px);
+      .text-hide;
+      float: right;
+    }
+    .owl-prev{
+      background-image:@ne_Sprite_path;
+      .sprite-cal(-445px, -118px, 100px, 76px);
+      .text-hide;
+      float: left;
+    }
+    .owl-item{
+      img{
+          margin: auto;
+      }
+    }
+    .owl_item_2{
+      padding-top: 100px;
+    }
+}
+.ne_clr_pl{
+  padding-top: 150px;
+  background: #ede2cd;
+  clear: both;
+  width: 100%;
+  position: relative;
+  &::before,
+  {
+    content: "";
+      background-image: url("@{img-path}/portfolio/ne/ne_seperator.png");
+      background-position: 0 0;
+      width: 100%;
+      height: 33px;
+      position: absolute;
+      top: -19px;
+  }
+
+  h6{
+    .base_font;
+    text-transform: uppercase;
+    .letter_spacing_ph(160);
+    text-align: center;
+    font-size: 23px;
+  }
+}
+.ne_color_palette{
+  position: relative;
+  margin-top: 44px;
+  &:before{
+    background-image:@ne_Sprite_path;
+    background-repeat: no-repeat;
+    background-position: -22px -697px;
+    width: 846px;
+    content: "";
+    position: absolute;
+    height: 30px;
+  }
+  li{
+    width: 32%;
+    display: inline-block;
+    position: relative;
+    margin-top: 60px;
+    &:before{
+      content: "";
+        height: 24px;
+        width: 3px;
+        background:#1a1a1a;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:-58px;
+    }
+    span{
+      font-family: 'BADABB';
+      color: #2e2e2e;
+      font-size: 50px;
+      .letter_spacing_ph(100);
+      font-weight: bold;
+      display: block;
+      text-align: center;
+    }
+    &.last_pl{
+      &:before{
+          top: -65px;
+      }
+    }
+  }
+}
+.cl_blocks{
+  background-image:@ne_Sprite_path;
+  background-position: -319px -273px;
+  position: absolute;
+  z-index: 1;
+      span{
+        color: #1a1a1a;
+        text-transform: uppercase;
+        font-size: 16px;
+        bottom: -32px;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        font-weight: bold;
+      }
+}
+
+.cl_block_1{
+  .sprite-cal-al(5px, -211px, -347px, -202px, 211px, 108px);
+    @media @l_desktop{
+      right: 150px;
+    }
+}
+.cl_block_2{
+  .sprite-cal-al(365px, 300px, 0px, -323px, 219px, 101px);
+}
+.cl_block_3{
+  .sprite-cal-al(468px ,-330px, -267px, -339px, 130px, 76px);
+}
+
+.ne_group_photo{
+  .inline-100;
+  &:before{
+    content: "";
+    position: absolute;
+    height:55%;
+    background-color: #ede2cd;
+    width: 100%;
+    z-index: -1;
+  }
+    img{
+      width: 100%;
+      .block;
+      position: relative;
+      z-index: 2;
+    }
+}
+
+.ne_gr_icons{
+  padding-top: 100px;
+  text-align: center;
+  h2{
+    .base_font;
+    font-size: 55px;
+    .letter_spacing_ph(420);
+    text-transform: uppercase;
+    font-weight:600;
+  }
+  > p{
+    font-size: 14px;
+    width: 720px;
+    margin: 20px auto 0 auto;
+  }
+}
+
+.ne_icons_circle{
+  position: relative;
+  width: 880px;
+  margin-top: 50px;
+  span{
+    position: absolute;
+    background-image: @ne_Sprite_path;
+  }
+    .star_icon{
+      .sprite-cal-al(0, 10%, -499px, -421px, 140px, 135px);
+    }
+    .book_icon{
+      .sprite-cal-al(180px, 19px, -670px, -419px, 103px, 115px);
+    }
+    .speech_icon{
+      .sprite-cal-al(320px, 6%, -804px, -414px, 183px, 167px);
+    }
+    .arrow_icon{
+      .sprite-cal-al(0, auto, -534px, -574px, 109px, 108px);
+      right: 15%;
+    }
+    .blog_icon{
+      .sprite-cal-al(180px, auto, -659px, -575px, 181px, 93px);
+      right: -20px;
+    }
+    .heart_icon{
+      .sprite-cal-al(360px, auto, -882px, -593px, 92px, 91px);
+      right: 14%;
+    }
+}
+.ne_icons_l,
+.ne_icons_r
+{
+  float: left;
+  margin-top: 50px;
+}
+.ne_icons_m{
+  margin: 100px auto 0 auto;
+  .inline-block;
+}
+
+.ne_fonts_sec{
+  position: relative;
+  margin-top:100px;
+  background: #19a2ab;
+  padding-top: 150px;
+  .inline-100;
+  .ne_center{
+    width: 800px;
+  }
+  &:before{
+    background-image: url("@{img-path}/portfolio/ne/ne_seperator.png");
+    background-position: 0 -69px;
+    width: 100%;
+    height:25px;
+    position: absolute;
+    top: -19px;
+    content: "";
+  }
+  &:after{
+    background-image: url("@{img-path}/portfolio/ne/ne_seperator.png");
+    background-position: 0 -103px;
+    width: 100%;
+    height:21px;
+    position: absolute;
+    bottom: -20px;
+    content: "";
+    left:0;
+  }
+}
+.ne_ft_l{
+  h3{
+    .base_font;
+    font-size: 30px;
+    letter-spacing: 1em;
+    font-weight: normal;
+    color: @white;
+    text-transform: uppercase;
+  }
+  p{
+    .inline-block;
+    line-height: 24px;
+    margin-top: 30px;
+    width: 350px;
+    .base_font;
+    font-size: 12px;
+    color: @white;
+  }
+}
+
+.ne_fonts_families{
+  .block;
+  text-align: center;
+  margin-top: 50px;
+  .ft_buttons{
+    margin-top: 15px;
+    .block;
+    clear: both;
+  }
+}
+.ne_ft_l{
+  float: left;
+  text-align: center;
+}
+.ne_ft_r{
+  float: right;  
+  margin-bottom: 80px;
+}
+.small_clouds_cont{
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fonts_left_bg{
+      background-image: url("@{img-path}/portfolio/ne/cloud_f_left.png");
+      background-repeat: no-repeat;
+      width: 603px;
+      height: 356px;
+      position: absolute;
+      bottom: -36px;
+      left: 0;
+      z-index: 1;
+}
+.fonts_right_bg{
+  background-image: url("@{img-path}/portfolio/ne/cloud_f_right.png");
+  background-repeat: no-repeat;
+  width: 256px;
+  height: 460px;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  z-index: 1;
+  @media @Xl_desktop{
+    bottom: -50px;
+  }
+  @media @l_desktop{
+    bottom: -41px;
+  }
+
+  &:after{
+    content: "";
+    width: 254px;
+    height: 5px;
+    right: 0;
+    background: @white;
+    position: absolute;
+    bottom: -5px;
+  }
+}
+.fonts_top_bg{
+  position: absolute;
+  top:20px;
+  right: 10%;
+}
+.ne_footer{
+  margin-top: 80px;
+  text-align: center;
+  .base_regular_font;
+  h3{
+    text-transform: uppercase;
+    font-size: 24px;
+    .letter_spacing_ph(60)
+  }
+  p{
+    color: @secondary-color;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+        .letter_spacing_ph(60);
+  }
+  span{
+    background: @ne_Sprite_path;
+    .sprite-cal(-33px, -497px, 287px, 183px);
+    .inline-block;
+    .text-hide;
+    margin: 30px 0;
+  }
+}

@@ -1,0 +1,93 @@
+// File Name: _section_1.less
+// Description: Ovegano text fill and Image hide animation
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+.fixed_ovegano{
+  margin-left: 50px;
+}
+.ovegano_g_desc{
+  text-align: center;
+}
+
+@media @s_desktop{
+  .center_cont{
+    width: 100%;
+  }
+  .salad_section{
+    .center_cont{
+      width: 100%;
+    }
+  }
+  .salad_left_section{
+    width: 25%;
+  }
+  .ovegano_g-logo{
+    left: 150px;
+  }
+  .ovegano_g_desc{
+    left: 50px;
+  }
+  .og_center_cont{
+    width: 100%;
+  }
+  .og_footer{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+@media @l_tablet{
+  .og_center_cont{
+    width: 100%;
+  }
+  .salad_left_section{
+    width: 10%;
+  }
+  .ovegano_fonts_section:before,
+  .ovegano_fonts_section:after
+  {
+    display: none;
+  }
+}
+@media @s_tablet{
+  .fixed_ovegano{
+    img{
+      width: 85%;
+    }
+  }
+  .words_cont{
+    width: 100%;
+  }
+  .fixed_ovegano{
+    margin-left: 0;
+    text-align: center;
+  }
+  .kachori_corner{
+    display: none;
+  }
+  .kachori_content{
+    text-align: center;
+    width: 100%;
+    left: 0;
+  }
+  .kachori_content p{
+    margin:50px auto 50px auto;
+    width: 80%;
+    text-align: center;
+  }
+  .salad_section, .ovegano_color_section{
+    display: none;
+  }
+  .branding_puff{
+    width: 100%;
+    text-align: center;
+  }
+  .branding_content{
+    width: 100%;
+    text-align: center;
+    margin-top: 0
+  }
+}

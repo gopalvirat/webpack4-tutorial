@@ -1,44 +1,48 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({     
-      filename: "min.css",          
+      filename: "app.css",          
     }),
     new HtmlWebpackPlugin({
       title: 'Home',  
-      filename: 'hh.html',
-      template: 'resources/html/home.html'          
-    }),
+      filename: 'index.html',
+      template: 'assets/template/home.html',
+      minify:true          
+    }), 
     new HtmlWebpackPlugin({
       title: 'About',  
-      filename: 'hh.html',
-      chunks: ['page2'],
-      template: 'resources/html/about.html'          
-    }),
+      filename: 'about.html',
+      template: 'assets/template/about.html'      
+    }),   
     new webpack.HotModuleReplacementPlugin({      
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'      
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'assets/resources/img/about/*.mp4', to: 'dist/' }      
+    ]),
+    
   ],
-  entry :'./src/index.js',
-  // to enable source mapping, can be used for easy debugging
-  devtool: 'inline-source-map',
-  // to tell dev server where to look for files
+  entry :'./app.js',  
+  devtool: 'inline-source-map',  
   devServer: {
          contentBase:  path.join(__dirname, 'dist'),
          compress:true,
          port: 9898,
          hot: true,
-         inline: true        
+         inline: true,
+         openPage: 'about.html'  
   },
   mode:'development',
 	output:{		
@@ -57,10 +61,13 @@ module.exports = {
           loader: 'css-loader'
           },
           {
-          loader: 'less-loader'
+          loader: 'less-loader',
+            options: {
+              javascriptEnabled: true
+            }
           }
         ]
-    },
+    },    
     {
       test: /\.(png|svg|jpg|gif)$/,
       use: [
@@ -72,15 +79,19 @@ module.exports = {
         use: [
           'file-loader'
         ]
-      }
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',          
+          options: {          
+              root: path.resolve(__dirname, './assets/resources/img'),
+              attrs: ['img:src','link:href','image:xlink:href']              
+          }
+        }
+      }      
   ]
-  }
-  // resolve: {
-  //   modules: ['node_modules'],
-  //   alias: {
-  //     'TweenMax': 'gsap/src/minified/TweenMax.min.js',
-  //     'cssplugin': 'gsap/CSSPlugin.js'
-  //   }
-  // }
-};
+  }  
+}
+
 

@@ -1,0 +1,406 @@
+// File Name: _expertise.less
+// Description: Expertise page
+// Used by: page.less
+// Dependencies:
+// ------------------------------------------------------------
+@import "_glitch.less";
+
+@cr_sprite_path: url("@{img-path}/career/cr_sprite.png");
+
+.cr_video_t-slice(){
+  .base_font;
+  font-size: 74px;
+  .letter_spacing_ph(-80);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @white;
+  text-align: center;
+  line-height: 62px;
+};
+
+
+.cr_center{
+  width: 1010px;
+  margin: auto;
+    @media @s_desktop{
+      width: 100%;
+    }
+    &.cr_video_center{
+      @media @s_desktop{
+        width: 85%;
+      }
+    }
+}
+.cr_header{
+  text-align: center;
+  margin-top: 130px;
+  h1{
+    .titles_bundle;
+  }
+  p{
+    width: 73%;
+    .p_title_inner();
+    margin-top: 80px;
+  }
+}
+
+.cr_vertical{
+  .original{
+    .transform(-83px,0,90deg) !important ;
+    &:after{
+      content: "";
+      background-image: @ex_Sprite_path;
+      .sprite-cal-al(auto,auto,-407px, -1px, 19px, 21px);
+      right: -35px;
+      bottom: 0;
+      .transform(0,0,270deg);
+      position: absolute;
+    }
+  }
+  @media @h_700{
+    top: 65%;
+  }
+}
+
+.cr_h_graphic{
+  width: 775px;
+  position: relative;
+  .inline-block;
+  margin-top:60px;
+  &:before,
+  &:after{
+    content: "";
+    background-image: @cr_sprite_path;
+    background-position: 0 0;
+    width: 267px;
+    height: 311px;
+    float: left;
+  }
+  &:after{
+    float: right;
+    background-position: -268px 0;
+  }
+  .cr_h_desc{
+    .base_regular_font;
+    font-size: 16px;
+    .letter_spacing_ph(-20);
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: @secondary-color;
+    color: @white;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 105px;
+  }
+  @media @s_tablet{
+    width: 90%;
+  }
+}
+
+.cr_cross_cont{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 248px;
+  height: 280px;
+  top: 0;
+}
+.cr_cross_star  {
+  background-image: @cr_sprite_path;
+background-position: -535px 0;
+ position: absolute;
+ opacity: 0;
+ width: 10px;
+ height: 9px;
+    animation: fade 1s linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+    10% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+.cr_video_des{
+  .middle;
+  .cr_v_play_btn{
+    .video_play_title;
+    .inline-100;
+  }
+  p{
+    margin-top: 18px;
+    position:relative;
+    overflow: hidden;
+    width: 500px;
+    height: 130px;
+    @media @s_tablet{
+      width: 300px;
+    }
+    &:before,
+    &:after{
+      content: attr(title);
+      position: absolute;
+      .cr_video_t-slice;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+        text-shadow:5px 2px 0px rgba(26, 64, 255, 0.60);
+        @media @ipad_l{
+          font-size: 68px;
+        }
+        @media @s_tablet{
+          font-size: 50px;
+        }
+    }
+    &:before{
+      height: 40px;
+      z-index: 1;
+    }
+    &:after{
+      color: @white;
+      clip: rect(39px,500px,130px,0px);
+        @media @ipad_l{
+            clip: rect(39px,500px,130px,0px);
+        }
+    }
+  }
+}
+
+.cr_demand_glitch_2{
+    position: relative;
+    height: 50px;
+    &:before,
+    &:after  {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .base_font;
+      font-size: 66px;
+      //font-size: 3.8vw;
+      text-transform: uppercase;
+      color: @black;
+    }
+    &:before{
+      height:55px;
+      top: 0px;
+      overflow: hidden;
+      animation: demand_glitch 2s linear infinite alternate-reverse;
+    }
+    &:after{
+      clip: rect(55px,900px,85px,0px);
+      animation: demand_glitch_clip 2s linear infinite alternate-reverse;
+    }
+  }
+
+
+.video_placeholder{
+  &:hover{
+    p{
+      &:before{
+          text-indent: -15px;
+          animation: gl_slice 5s linear infinite;
+          @media @ipad_l{
+            text-indent: -4px;
+          }
+      }
+      &:after{
+        animation: gl_shadow 5s linear infinite  alternate-reverse;
+      }
+    }
+  }
+}
+
+.cr_center .video_bg{
+    //animation: 5s infinite linear frame_v_glitch;
+}
+
+
+.cr_opening_section{
+  margin-top: 180px;
+  clear: both;
+  text-align: center;
+}
+.cr_demand_glitch{
+  .base_font;
+  font-size: 55px;
+  //font-size: 3.8vw;
+  text-transform: uppercase;
+  color: @black;
+  position: relative;
+  margin: 0 auto;
+  width: 596px;
+  @media @s_tablet{
+    font-size: 47px;
+  }
+}
+
+.cr_demand_glitch:after{
+  content:attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow:-1px 0 @secondary-color;
+  top: 0;
+  background: white;
+  overflow: hidden;
+  clip:rect(0,900px,0,0);
+  animation: glitchOne 4s infinite linear alternate-reverse;
+  @media @s_tablet{
+    left: 49px;
+  }
+
+}
+
+.cr_demand_glitch:before{
+  content:attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow:-1px 0 @secondary-color;
+  top: 0;
+  color: black;
+  background: white;
+  overflow: hidden;
+  clip:rect(0,900px,0,0);
+  animation: glitchTwo 3s infinite linear alternate-reverse;
+}
+
+
+.cr_op_s_title{
+  .base_font;
+  text-transform: uppercase;
+  color: @secondary-color;
+  font-size: 24px;
+  .letter_spacing_ph(160);
+  font-weight: 600;
+  @media @s_tablet{
+    font-size: 21px;
+  }
+}
+
+.cr_openings_list{
+  .inline-100;
+  margin-top: 80px;
+    @media @s_desktop{
+      width: 95%
+    }
+
+  li{
+    text-align: left;
+    margin-top: 80px;
+    .base_regular_font;
+      .cr_job_title{
+        font-size: 18px;
+        text-transform: uppercase;
+        .letter_only_spacing(440);
+        width: 250px;
+        .inline-block;
+        position: relative;
+        vertical-align: top;
+        @media @s_tablet{
+          //border-bottom:1px solid @black;
+          width: auto;
+        }
+        &:after{
+          content: "";
+          background-image: url("@{img-path}/expertise/ex_divider.svg");
+          position: absolute;
+          right: -17px;
+          //bottom: -23px;
+          top: 0px;
+          width: 55px;
+          height: 115px;
+          @media @s_tablet{
+            display: none;
+          }
+        }
+      }
+    .cr_job_desc{
+      width: 700px;
+      margin-left: 40px;
+      .inline-block;
+      vertical-align: middle;
+      p{
+        font-size: 16px;
+      }
+      @media @l_tablet{
+        width: 68%;
+      }
+      @media @s_tablet{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    .layer_button{
+      margin-top: 20px;
+    }
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.cr_footer_desc{
+  margin: 120px 0 0px 0;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  p{
+    width: 4890px;
+  }
+  span{
+    font-size: 29px;
+    .base_regular_font;
+    .letter_only_spacing(140);
+    .inline-block;
+    @media @s_tablet{
+      font-size: 25px;
+    }
+    b{
+      color: @secondary-color;
+      font-weight: normal;
+    }
+  }
+}
+
+
+.morecontent{
+  //display: block;
+  span {
+      display: none;
+  }
+}
+.morelink{
+  color: @black;
+  font-weight: bold;
+}
+
+.cv_mail{
+  .inline-block;
+  width: 100%;
+  font-weight:normal;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  margin-top: 100px;
+  font-size: 25px;
+  color: @secondary-color;
+}

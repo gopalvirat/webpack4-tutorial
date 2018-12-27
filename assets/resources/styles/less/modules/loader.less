@@ -1,0 +1,115 @@
+// File Name: _error.less
+// Description: Initial loading screen
+// Used by: page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.h_loader_middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -33px;
+}
+.h_loader_left{
+  position: relative;
+    span{
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border:3px solid #000;
+      border-radius: 50%;
+      &:after{
+        content:"";
+        background: transparent url("assets/resources/img/home/loading_assets.png") no-repeat 0 0;
+        position: absolute;
+        width: 9px;
+        height: 12px;
+        top: 4px;
+        left:5px;
+      }
+    }
+    p{
+      position: absolute;
+      top: 30px;
+      width: 100px;
+      font-family: 'Telegraph Clean';
+      font-size: 12px;
+    }
+}
+.h_loader_center{
+  position: relative;
+  margin-top: 10px;
+  margin-left: 27px;
+}
+.h_loader_right{
+    position: absolute;
+    right: -23px;
+    bottom: -27px;
+    width: 31px;
+    height: 51px;
+    background: transparent url("assets/resources/img/home/loading_assets.png") no-repeat 0px -30px;
+    .h_loader_blimp{
+      position: absolute;
+      width: 67px;
+      height: 25px;
+      bottom: 64px;
+      right: 42px;
+      background: transparent url("assets/resources/img/home/loading_assets.png") no-repeat -14px 0;
+      animation: path_travel 30s linear forwards;
+
+    }
+    p{
+      position: absolute;
+      bottom: -36px;
+      font-family: 'Telegraph Clean';
+      font-size: 12px;
+      color: #1a40ff;
+    }
+}
+
+@keyframes path_travel{
+0%{
+  transform: translate(0,0);
+}
+50%{
+  transform: translate(-164px, -54px);
+}
+100%{
+  transform: translate(-364px, -77px);
+}
+
+}
+
+.h_loader_footer{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+    p{
+        font-family: 'Telegraph Clean';
+        font-size: 12px;
+        letter-spacing: .8px;
+        line-height: 19px;
+        width: 415px;
+    }
+}
+
+.h_loader_l_line{
+  &:after{
+    content: "";
+    width: 200px;
+    height: 5px;
+    background-color:#1a40ff;
+    display: block;
+    margin-top: 5px;
+  }
+    font-family: 'Telegraph Clean';
+    font-size: 11px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

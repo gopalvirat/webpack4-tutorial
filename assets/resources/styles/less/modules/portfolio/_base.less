@@ -1,0 +1,99 @@
+// File Name: _base.less
+// Description: Portfolio page
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+.pt_b_header{
+  text-align: center;
+  position: relative;
+}
+.pt_b_center{
+  width: 1000px;
+  margin: auto;
+  @media @l_tablet{
+    width: 90%;
+  }
+}
+.pt_b_cont{
+  margin-top: 150px;
+  width: 1100px;
+  @media @l_tablet{
+    width: 100%;
+    text-align: center;
+  }
+}
+.pt_base_tilt{
+  display: none;
+  position: absolute;
+  left: 45px;
+  top: -27px;
+  z-index: 1;
+  .base_regular_font;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: @black;
+  .letter_spacing_ph(440);
+  &:after{
+    content: "";
+    transform: rotate(18deg);
+    width: 9px;
+    height: 100px;
+    left: 131px;
+    top: -11px;
+    background-color: @secondary-color;
+    position: absolute;
+  }
+}
+
+
+.pt_b_folio{
+  width: 547px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-bottom: 50px;
+  img{
+    max-width: 100%;
+  }
+  @media @l_tablet{
+      width: 46%;
+  }
+  &.moj_b_folio{
+    margin-top: 50px;
+  }
+  &.atg_b_folio{
+    span{
+      left: 67px;
+      &:after{
+        left: 245px;
+      }
+    }
+  }
+  &.ne_b_folio{
+    span{
+      left: auto;
+      top: 25px;
+      right: 57px;
+      &:after{
+        left: -22px;
+      }
+    }
+  }
+  &.moj_b_folio{
+    span{
+      left: 85px;
+    }
+  }
+  a{
+    &:hover{
+      span{
+        display: block;
+      }
+    }
+  }
+}
+.pt_b_footer{
+  margin:80px auto;
+  clear: both;
+}

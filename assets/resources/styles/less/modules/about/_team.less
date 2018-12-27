@@ -1,0 +1,145 @@
+// File Name: _team.less
+// Description: Meet the team
+// Used by: _about.less
+// Dependencies:
+// ------------------------------------------------------------
+
+.mt_team{
+  margin: 180px auto 0 auto;
+  width: 100%;
+}
+
+.tm_title{
+  .titles_bundle;
+  font-size: 90px;
+  .inline-100;
+  text-align: center;
+  line-height: 0.8em;
+  font-weight: normal;
+    span{
+      .block;
+      font-size: 27px;
+      clear: both;
+      .letter_spacing_ph(640);
+      @media @s_tablet{
+        font-size: 24px;
+      }
+    }
+    @media @s_tablet{
+      font-size: 70px;
+    }
+}
+
+.tm_slider{
+  width: 100%;
+  display: block;
+  clear: both;
+  //margin-left: 115px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.tm_name{
+  position: absolute;
+  .base_font;
+  font-weight: 700;
+  color: #181818;
+  .letter_spacing_ph(240);
+  font-size: 30px;
+  top: 50%;
+  margin-top: -25px;
+  right: -30px;
+  text-transform: uppercase;
+}
+
+.tm_slide{
+  p{
+    font-size: 12px;
+    .base_regular_font;
+    text-transform: uppercase;
+    .letter_spacing_ph(560);
+    width: 100%;
+    background-color: @secondary-color;
+    color: @white;
+    padding:1px 0 2px 25px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  &.emp_2,
+  &.emp_3
+  {
+    .tm_name{
+      right: -80px;
+    }
+  }
+  &.emp_5{
+    .tm_name{
+      right: -20px;
+    }
+  }
+}
+
+.tm_base_avtar{
+  position: absolute;
+  z-index: 1;
+}
+
+.blur_filter{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+}
+
+.tm_slide{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  float: left;
+}
+
+.tm_slider ul {
+  width: 6000px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.about_btm_info{
+  clear: both;
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+    p{
+      font-size: 15px;
+      line-height: 19px;
+      .base_font;
+      font-weight: 100;
+      width: 70%;
+      margin: auto;
+      text-align: center;
+    }
+    .abt_s_tl{
+      .block;
+      margin: 60px 0;
+      .base_regular_font;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      .letter_spacing_ph(320);
+    }
+    .abt_l_tl{
+      .base_font;
+      font-size: 116px;
+      line-height: 171px;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      .letter_spacing_ph(-80);
+      font-weight: 700;
+      text-transform: uppercase;
+      position: absolute;
+      height: 112px;
+      width: 100%;
+    }
+}

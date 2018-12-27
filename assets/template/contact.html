@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact</title>
+        <link rel='shortcut icon' type='image/x-icon' href='desktop/assets/resources/img/favicon.ico' />
+        <link href="desktop/assets/resources/styles/css/page.css" type="text/css" rel="stylesheet"  />
+        <link rel="stylesheet" type="text/css" href="desktop/assets/resources/fonts/fonts.css" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+        <link href="common/css/dev.css" rel="stylesheet" type="text/css"/>
+        <?php include_once 'common/templates/loader.php'; ?>
+        <?php include_once 'common/templates/gtm.php'; ?>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body class="contact_page">
+        <?php include_once 'common/templates/gtm-frame.php'; ?>
+        <?php include_once 'common/templates/header.php'; ?>
+        <?php include_once 'common/templates/navigations.php'; ?>
+        <!--main container-->
+        <div class="center_contact">
+            <div class="ct_heading">
+                <h1>Let’s work together</h1>
+                <p>We’d love to hear from you</p>
+            </div>
+
+            <div class="ct_content_panel">
+
+                <div class="ct_left_pnl">
+                    <!--contact Form-->
+                    <div class="ct_form">
+                        <form id="contact_form" action="" method="post" onsubmit="return ajaxContactForm(this)">
+                            <div class="msg"></div>
+                            <div class="group">
+                                <input name="contact_name" placeholder="Name" type="text"   data-required="Name is required" />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <p class="error" id="contact_name"></p>
+                            </div>
+
+                            <div class="con_field_pair">
+                                <div class="group">
+                                    <input name="contact_email" placeholder="Email" type="text" data-required="Email is required" data-email="Email is not valid" />
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <p class="error" id="contact_email"></p>
+                                </div>
+                                <div class="group con_phone_field">
+                                    <input name="contact_phone" placeholder="Phone" type="text" data-integer="Phone number is not valid" />
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <p class="error" id="contact_phone"></p>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <input name="contact_website" placeholder="Website" type="text" />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <p class="error" id="contact_website"></p>
+                            </div>
+                            <div class="group">
+                                <input name="contact_message" placeholder="Message" type="text" />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <p class="error" id="contact_message"></p>
+                            </div>
+                            <div class="group">
+                                <div class="g-recaptcha" data-sitekey="6LcJiFIUAAAAALPA4jbxneNbwUohwhmb4ic_vNwV"></div>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <p class="error" id="contact_captcha"></p>
+                            </div>
+                            <div class="button_cont layer_button">
+                                <input type="submit" value="Submit" class="submit_button upper_layer" />
+                                <span class="bottom_layer"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ct_bottom_pnl">
+                        <div class="ct_address_cont">
+                            <ul>
+                                <li  class="tab-address current" data-tab="tab-india">India</li>
+                                <li class="tab-address" data-tab="tab-cz">/ czech republic</li>
+                            </ul>
+                            <address class="tab_content current" id="tab-india">
+                                S.C.O 822, Second Floor<br/>
+                                NAC Mani Majra <br/>
+                                Chandigarh – 160101 <br/>
+                                <b>+91–172–2739754</b>
+                            </address>
+                            <address class="tab_content" id="tab-cz">
+                                Lidická 700/19 <br/>
+                                Veveří <br/>
+                                Brno – 602 00 <br/>
+                                <b>+420 774-233-112</b>
+                            </address>
+                        </div>
+                        <div class="web_link">
+                            <a href="http://blimp.agency/">WWW.BLIMP.AGENCY</a>
+                        </div>
+
+                        <div class="creative_desc">
+                            Lets create something incredible. Together.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- window left section -->
+        <div class="say_hello left_vertical_section">
+            <span class="original">Say hello</span>
+        </div>
+
+
+
+
+
+        <div class="ct_bg-cont">
+            <div class="ct_color_bg">
+            </div>
+            <div class="ct_graphic">
+                <div class="brain_sketch">
+                    <span class="brain_body"></span>
+                </div>
+                <div class="brain_flowers"></div>
+                <div class="girl_pic">
+                    <span class="gl_eye"></span>
+                    <img src="desktop/assets/resources/img/contact/girl.png" />
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <?php include_once 'common/templates/footer.php'; ?>
+            </body>
+
+</html>

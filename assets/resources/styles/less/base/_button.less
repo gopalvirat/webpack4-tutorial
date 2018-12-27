@@ -1,0 +1,79 @@
+// File Name: _button.less
+// Description: All button styles and transitions
+// Used by: Page.less
+// Dependencies:
+// ------------------------------------------------------------
+
+@button_base_color: #1a40ff;
+@button_width: 60px;
+@button_height:40px;
+@secondary-color_alt: #000;
+@secondary-color_primary : @white;
+@keyframes btn_anim {
+    0% {
+      text-shadow: -4px 0px 0px fade(@secondary-color_primary,60%), 2px 0px 0px fade(@secondary-color_alt, 0%);
+    }
+    25% {
+      text-shadow: -8px 0px 0px fade(@secondary-color_primary,40%), 8px 0px 0px fade(@secondary-color_alt, 50%);
+    }
+    50% {
+      text-shadow: -6px 0px 0px fade(@secondary-color_primary, 0%), 6px 0px 0px fade(@secondary-color_alt, 30%);
+    }
+    75% {
+      text-shadow: -2px 0px 0px fade(@secondary-color_primary,40%), 4px 0px 0px fade(@secondary-color_alt, 40%);
+    }
+    100% {
+      text-shadow: -4px 0px 0px fade(@secondary-color_primary,60%), 2px 0px 0px fade(@secondary-color_alt, 0%);
+    }
+}
+
+
+.base_button(@size: 17px, @spacing: 440){
+  .base_regular_font;
+  font-size: @size;
+  color: @white;
+  text-transform: uppercase;
+  .letter_spacing_ph(@spacing);
+  border: none;
+  background: @button_base_color;
+  height: @button_height;
+  padding:0 @button_width;
+  line-height: @button_height;
+  position: relative;
+  .inline-block;
+  text-align: center;
+  margin-left: -8px;
+    &:after{
+      content: "";
+      background-color: fade(@button_base_color, 47%);
+      .transition(all,.1s);
+      width: 100%;
+      height: @button_height;
+      position: absolute;
+      left:8px;
+      top:8px;
+      z-index: -1;
+    }
+    &:hover{
+        animation: btn_anim 1.2s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+      &:after{
+        top: 0;
+        left: 0;
+      }
+    }
+}
+
+.bottom_layer{
+  background-color: fade(@button_base_color, 47%);
+  .transition(all,.1s);
+  width: 226px;
+  height: @button_height;
+  position: absolute;
+  left:8px;
+  top:8px;
+  z-index: -1;
+}
+
+.submit_button{
+  .base_button(17px);
+}

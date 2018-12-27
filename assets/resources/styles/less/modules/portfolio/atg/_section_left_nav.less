@@ -1,0 +1,79 @@
+// File Name: _section_6.less
+// Description: Seeds and life section
+// Used by: portfolio.less
+// Dependencies:
+// ------------------------------------------------------------
+.s_l_nav{
+  position: absolute;
+  left: 5%;
+  //top:0px;
+  z-index: 2;
+  &_num{
+    float: left;
+    ul{
+      position: relative;
+      &:before,
+      &:after
+      {
+        content: "";
+        position: absolute;
+        height:2px;
+        width: 100%;
+        background-color: @secondary-color;
+      }
+      &:after{
+        bottom: 0;
+      }
+    }
+    li{
+      padding-top: 50px;
+      &:before{
+        content: "";
+        width: 2px;
+        height: 100%;
+        left: 5px;
+        top: 0;
+        background-color: @secondary-color;
+        position: absolute;
+      }
+        a{
+          .transform(0,0, 90deg);
+          .inline-block;
+          .base_regular_font;
+          font-size: 24px;
+          font-weight: bold;
+          &.active{
+            color: @secondary-color;
+          }
+        }
+        &.lt-child{
+          padding-bottom: 50px;
+        }
+    }
+  }
+
+}
+
+.s_l
+{
+  &_nav_brk{
+    float: left;
+    margin-left: 20px;
+  }
+  &_middle{
+    .transform(-138px,168px, 90deg);
+    .inline-block;
+    .base_regular_font;
+    font-size: 16px;
+    .letter_spacing_ph(820);
+  }
+  &_top{
+    &:before{
+      left: 0;
+    }
+  }
+  &_top,
+  &_bottom{
+    margin-left: 46px;
+  }
+}
